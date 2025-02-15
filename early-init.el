@@ -1,3 +1,8 @@
+;; -*- lexical-binding: t -*-
+
+;; This file is loaded before package.el is initialized, and
+;; before the first graphical frame is initialized in Emacs 27+.
+
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)

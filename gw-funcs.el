@@ -138,9 +138,9 @@ For example, * TODO ItemA -> * DONE TODO ItemA"
   "Kill window by pressing <q>."
   (select-window
    (car (seq-filter
-        (lambda (window)
-          (equal name (buffer-name (window-buffer window))))
-        (window-list-1 nil 0 t)))))
+         (lambda (window)
+           (equal name (buffer-name (window-buffer window))))
+         (window-list-1 nil 0 t)))))
 
 (defun gw/kill-other-buffers ()
   "Kill all other buffers."
@@ -164,3 +164,16 @@ For example, * TODO ItemA -> * DONE TODO ItemA"
   (interactive)
   (let ((consult-ripgrep-command "rg --null --ignore-case --type org --line-buffered --color=always --max-columns=500 --no-heading --line-number . -e ARG OPTS"))
     (consult-ripgrep org-roam-directory)))
+
+(defun gw/elfeed-search-browse-background-url ()
+  "Open current `elfeed' entry (or region entries) in browser without losing focus."
+  (interactive)
+  (let ((entries (elfeed-search-selected)))
+    (mapc (lambda (entry)
+            (start-process (concat "open " (elfeed-entry-link entry))
+                           nil "open" "--background" (elfeed-entry-link entry))
+            (elfeed-untag entry 'unread)
+            (elfeed-search-update-entry entry))
+          entries)
+    (unless (or elfeed-search-remain-on-entry (use-region-p))
+      (forward-line))))

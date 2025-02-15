@@ -79,14 +79,14 @@
         (or (bound-and-true-p straight-base-dir)
             user-emacs-directory)))
       (bootstrap-version 7))
-      (unless (file-exists-p bootstrap-file)
-        (with-current-buffer
-            (url-retrieve-synchronously
-             "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-             'silent 'inhibit-cookies)
-          (goto-char (point-max))
-          (eval-print-last-sexp)))
-      (load bootstrap-file nil 'nomessage))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
 (straight-use-package '(org :type built-in))
@@ -94,8 +94,16 @@
 ;; theme
 (load (expand-file-name "themes/timu-macos-theme.el" user-emacs-directory)) ;; load theme
 (require 'timu-macos-theme)
+(customize-set-variable 'timu-macos-org-intense-colors nil)
+(customize-set-variable 'timu-macos-scale-org-document-title t)
+(customize-set-variable 'timu-macos-scale-org-document-info t)
+(customize-set-variable 'timu-macos-scale-org-level-1 t)
+(customize-set-variable 'timu-macos-scale-org-level-2 t)
+(customize-set-variable 'timu-macos-scale-org-level-3 t)
+(customize-set-variable 'timu-macos-colors-contrast 'contrasted)
+(customize-set-variable 'timu-macos-mode-line-border-type "none")
+(customize-set-variable 'timu-macos-mode-line-background t)
 (load-theme 'timu-macos t)
-(customize-set-variable 'timu-macos-org-intense-colors t)
 
 ;; evil
 (setq evil-want-C-u-scroll t) ;; need this before evil is loaded apparently
@@ -122,35 +130,17 @@
   (require 'evil-org-agenda)
   (evil-org-set-key-theme '(calendar navigation todo shift))
   (evil-org-agenda-set-keys))
+(use-package evil-commentary
+  :straight t
+  :demand t
+  :config
+  (evil-commentary-mode))
 
 (use-package which-key
   :straight t
   :demand t
   :config
   (which-key-mode))
-
-;; (use-package ivy
-;;   :demand t
-;;   :config
-;;   (ivy-mode)
-;;
-;;   ;; Always show half the window height. Why?
-;;   ;; .. useful when searching through large lists of content.
-;;   (setq ivy-height-alist `((t . ,(lambda (_caller) (/ (frame-height) 2)))))
-;;
-;;   ;; VIM style keys in ivy (holding Control).
-;;   (define-key ivy-minibuffer-map (kbd "C-j") 'next-line)
-;;   (define-key ivy-minibuffer-map (kbd "C-k") 'previous-line)
-;;   (define-key ivy-minibuffer-map (kbd "C-h") 'minibuffer-keyboard-quit)
-;;   (define-key ivy-minibuffer-map (kbd "C-l") 'ivy-done)
-;;
-;;   ;; open and next
-;;   (define-key ivy-minibuffer-map (kbd "C-M-j") 'ivy-next-line-and-call)
-;;   (define-key ivy-minibuffer-map (kbd "C-M-k") 'ivy-previous-line-and-call)
-;;   (define-key ivy-minibuffer-map (kbd "<C-return>") 'ivy-done)
-;;
-;;   ;; so we can switch away
-;;   (define-key ivy-minibuffer-map (kbd "C-w") 'evil-window-map))
 
 (use-package company ;; autocomplete backend
   :straight t
@@ -192,17 +182,24 @@
   :straight t
   :hook ((prog-mode) . highlight-numbers-mode))
 
+;; (set-face-attribute 'default nil
+;;                     :family "Iosevka"
+;;                     :height 200)
+;; (set-face-attribute 'fixed-pitch nil
+;;                     :family "Iosevka"
+;;                     :height 200)
+;; (set-face-attribute 'variable-pitch nil
+;;                     :family "Iosevka"
+;;                     :height 200)
+
 (set-face-attribute 'default nil
-                    :family "Iosevka"
-                    :weight 'light
+                    :family "RobotoMono Nerd Font Mono"
                     :height 200)
 (set-face-attribute 'fixed-pitch nil
-                    :family "Iosevka"
-                    :weight 'light
+                    :family "RobotoMono Nerd Font Mono"
                     :height 200)
 (set-face-attribute 'variable-pitch nil
-                    :family "Iosevka"
-                    :weight 'light
+                    :family "RobotoMono Nerd Font Mono"
                     :height 200)
 
 ;; emacs speaks statistics
@@ -214,7 +211,6 @@
   (add-hook 'ess-R-post-run-hook 'ess-execute-screen-options)
   (define-key inferior-ess-mode-map "\C-cw" 'ess-execute-screen-options)
   :init (require 'ess-site))
-(use-package quarto-mode :straight t)
 
 ;;; DISPLAY OPTIONS
 (global-display-fill-column-indicator-mode 1)
@@ -280,16 +276,16 @@
 
 ;;; KEYMAP
 (use-package evil-collection
-  :straight (evil-collection :type git :files (:defaults "modes" "evil-collection-pkg.el") :host github :repo "emacs-evil/evil-collection")
+  :straight t
   :after evil
   :config
   (evil-collection-init))
 (with-eval-after-load 'evil
-                      (evil-set-leader '(normal) (kbd "<SPC>"))
-                      (evil-define-key 'normal 'global (kbd "<leader>k") 'find-file-in-project)
-                      (evil-define-key 'normal 'global (kbd "<leader>f") 'counsel-git-grep)
-                      (evil-define-key 'normal 'global (kbd "<leader>s") 'swiper)
-                      (evil-define-key 'normal 'global (kbd "<leader>b") 'counsel-switch-buffer))
+  (evil-set-leader '(normal) (kbd "<SPC>"))
+  (evil-define-key 'normal 'global (kbd "<leader>k") 'find-file-in-project)
+  (evil-define-key 'normal 'global (kbd "<leader>f") 'counsel-git-grep)
+  (evil-define-key 'normal 'global (kbd "<leader>s") 'swiper)
+  (evil-define-key 'normal 'global (kbd "<leader>b") 'counsel-switch-buffer))
 
 ;; can I set org-mode variables here?
 (setq org-directory "~/orgmode"
@@ -334,6 +330,20 @@
                                      t)
                            ))
 
+(setq org-todo-keywords
+      (quote ((sequence "TODO(t)" "NEXT(t)" "|" "DONE(d)")
+              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)"))))
+(setq-default org-enforce-todo-dependencies t)
+(setq org-todo-keyword-faces
+      (quote (("TODO" :foreground "red" :weight bold)
+              ("NEXT" :foreground "blue" :weight bold)
+              ("DONE" :foreground "forest green" :weight bold)
+              ("WAITING" :foreground "orange" :weight bold)
+              ("HOLD" :foreground "magenta" :weight bold)
+              ("CANCELLED" :foreground "forest green" :weight bold)
+              ("MEETING" :foreground "forest green" :weight bold)
+              ("PHONE" :foreground "forest green" :weight bold))))
+
 (use-package org-superstar
   :straight t
   :config
@@ -346,6 +356,7 @@
                                               ("PROG" . 9744)
                                               ("DONE" . 9745)))
   :hook (org-mode . org-superstar-mode))
+
 
 (use-package svg-tag-mode
   :straight t
@@ -371,17 +382,21 @@
                                :stroke 0 :margin 0)) :ascent 'center)))
   (setq svg-tag-tags
         `(
+          ;; Org tags
+          (":\\([A-Za-z0-9]+\\)" . ((lambda (tag) (svg-tag-make tag))))
+          (":\\([A-Za-z0-9]+[ \-]\\)" . ((lambda (tag) tag)))
+          
           ;; Task priority
           ("\\[#[A-Z]\\]" . ( (lambda (tag)
-                                (svg-tag-make tag :face 'org-priority
+                                (svg-tag-make tag :face 'org-priority 
                                               :beg 2 :end -1 :margin 0))))
-          ;; Progress
-          ("\\(\\[[0-9]\\{1,3\\}%\\]\\)" . ((lambda (tag)
-                                              (svg-progress-percent (substring tag 1 -2)))))
-          ("\\(\\[[0-9]+/[0-9]+\\]\\)" . ((lambda (tag)
-                                            (svg-progress-count (substring tag 1 -1)))))
 
-          ;; Citation of the form [cite:@Knuth:1984]
+          ;; TODO / DONE
+          ("TODO" . ((lambda (tag) (svg-tag-make "TODO" :face 'org-todo :inverse t :margin 0))))
+          ("DONE" . ((lambda (tag) (svg-tag-make "DONE" :face 'org-done :margin 0))))
+
+
+          ;; Citation of the form [cite:@Knuth:1984] 
           ("\\(\\[cite:@[A-Za-z]+:\\)" . ((lambda (tag)
                                             (svg-tag-make tag
                                                           :inverse t
@@ -391,6 +406,8 @@
                                                      (svg-tag-make tag
                                                                    :end -1
                                                                    :crop-left t))))
+
+          
           ;; Active date (with or without day name, with or without time)
           (,(format "\\(<%s>\\)" date-re) .
            ((lambda (tag)
@@ -401,49 +418,64 @@
           (,(format "<%s \\(%s>\\)" date-re day-time-re) .
            ((lambda (tag)
               (svg-tag-make tag :end -1 :inverse t :crop-left t :margin 0))))
+
+          ("\([0-9a-zA-Z]\)" . ((lambda (tag)
+                                  (svg-tag-make tag :beg 1 :end -1 :radius 12))))
+          ("\([0-9a-zA-Z][0-9a-zA-Z]\)" . ((lambda (tag)
+                                             (svg-tag-make tag :beg 1 :end -1 :radius 8))))
+          ("|[0-9a-zA-Z- ]+?|" . ((lambda (tag)
+                                    (svg-tag-make tag :face 'font-lock-comment-face
+                                                  :margin 0 :beg 1 :end -1))))
+
           ;; Inactive date  (with or without day name, with or without time)
           (,(format "\\(\\[%s\\]\\)" date-re) .
            ((lambda (tag)
               (svg-tag-make tag :beg 1 :end -1 :margin 0 :face 'org-date))))
           (,(format "\\(\\[%s \\)%s\\]" date-re day-time-re) .
            ((lambda (tag)
-              (svg-tag-make tag :beg 1 :inverse nil
-						    :crop-right t :margin 0 :face 'org-date))))
+              (svg-tag-make tag :beg 1 :inverse nil :crop-right t :margin 0 :face 'org-date))))
           (,(format "\\[%s \\(%s\\]\\)" date-re day-time-re) .
            ((lambda (tag)
-              (svg-tag-make tag :end -1 :inverse t
-						                :crop-left t :margin 0 :face 'org-date)))))))
+              (svg-tag-make tag :end -1 :inverse t :crop-left t :margin 0 :face 'org-date))))
+
+          ;; ;; Progress
+          ("\\(\\[[0-9]\\{1,3\\}%\\]\\)" . ((lambda (tag)
+                                              (svg-progress-percent (substring tag 1 -2)))))
+          ("\\(\\[[0-9]+/[0-9]+\\]\\)" . ((lambda (tag)
+                                            (svg-progress-count (substring tag 1 -1)))))
+          ))
+  )
 
 (add-hook 'org-mode-hook 'svg-tag-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
-(plist-put org-format-latex-options :scale 1.5)
+(plist-put org-format-latex-options :scale 1.75)
 (use-package
   org-fragtog
   :straight t
   :hook (org-mode-hook . org-fragtog-mode))
 
-(defun my/prettify-symbols-setup ()
-  (push '("[ ]" . "") prettify-symbols-alist)
-  (push '("[X]" . "") prettify-symbols-alist)
-  (push '("[-]" . "" ) prettify-symbols-alist)
-  (push '("#+BEGIN_SRC" . ?≫) prettify-symbols-alist)
-  (push '("#+END_SRC" . ?≫) prettify-symbols-alist)
-  (push '("#+begin_src" . ?≫) prettify-symbols-alist)
-  (push '("#+end_src" . ?≫) prettify-symbols-alist)
-  (push '("#+BEGIN_QUOTE" . ?❝) prettify-symbols-alist)
-  (push '("#+END_QUOTE" . ?❞) prettify-symbols-alist)
-  (push '(":PROPERTIES:" . "") prettify-symbols-alist)
-  (push '(":projects:" . "") prettify-symbols-alist)
-  (push '(":work:"     . "") prettify-symbols-alist)
-  (push '(":inbox:"    . "") prettify-symbols-alist)
-  (push '(":task:"     . "") prettify-symbols-alist)
-  (push '(":thesis:"   . "") prettify-symbols-alist)
-  (push '(":uio:"      . "") prettify-symbols-alist)
-  (push '(":emacs:"    . "") prettify-symbols-alist)
-  (push '(":learn:"    . "") prettify-symbols-alist)
-  (push '(":code:"     . "") prettify-symbols-alist)
-  (prettify-symbols-mode))
+;; (defun my/prettify-symbols-setup ()
+;;   (push '("[ ]" . "") prettify-symbols-alist)
+;;   (push '("[X]" . "") prettify-symbols-alist)
+;;   (push '("[-]" . "" ) prettify-symbols-alist)
+;;   (push '("#+BEGIN_SRC" . ?≫) prettify-symbols-alist)
+;;   (push '("#+END_SRC" . ?≫) prettify-symbols-alist)
+;;   (push '("#+begin_src" . ?≫) prettify-symbols-alist)
+;;   (push '("#+end_src" . ?≫) prettify-symbols-alist)
+;;   (push '("#+BEGIN_QUOTE" . ?❝) prettify-symbols-alist)
+;;   (push '("#+END_QUOTE" . ?❞) prettify-symbols-alist)
+;;   (push '(":PROPERTIES:" . "") prettify-symbols-alist)
+;;   (push '(":projects:" . "") prettify-symbols-alist)
+;;   (push '(":work:"     . "") prettify-symbols-alist)
+;;   (push '(":inbox:"    . "") prettify-symbols-alist)
+;;   (push '(":task:"     . "") prettify-symbols-alist)
+;;   (push '(":thesis:"   . "") prettify-symbols-alist)
+;;   (push '(":uio:"      . "") prettify-symbols-alist)
+;;   (push '(":emacs:"    . "") prettify-symbols-alist)
+;;   (push '(":learn:"    . "") prettify-symbols-alist)
+;;   (push '(":code:"     . "") prettify-symbols-alist)
+;;   (prettify-symbols-mode))
 
 (setq org-capture-templates
       '(("t" "[t]ask" entry (file+headline "~/orgmode/todo.org" "Inbox")
@@ -456,10 +488,12 @@
          "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
         ("e" "[e]ln" entry (file+function "~/orgmode/eln.org" org-reverse-datetree-goto-date-in-file)
          "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+        ("p" "[p]lanner" entry (file+function "~/orgmode/planner.org" org-reverse-datetree-goto-date-in-file)
+         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
         ("s" "[s]hopping" checkitem (file+olp "~/orgmode/shopping.org" "Shopping")
          "+ [ ] %?")))
 (add-hook 'org-mode-hook #'toggle-word-wrap)
-(setq org-startup-folded t)
+;;(setq org-startup-folded t)
 
 (setq-default org-reverse-datetree-level-formats
               '("%Y"
@@ -486,7 +520,8 @@
         org-roam-ui-follow t
         org-roam-ui-update-on-save t
         org-roam-ui-open-on-start t))
-(use-package org-reverse-datetree :straight t)
+(use-package org-reverse-datetree
+  :straight t)
 
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
@@ -495,15 +530,59 @@
  'org-babel-load-languages
  '((R . t)
    (latex . t)))
-;; end org
+
+(use-package org-super-agenda
+  :straight (org-super-agenda :type git :host github :repo "alphapapa/org-super-agenda")
+  :config
+  (org-super-agenda-mode)
+  :init
+  (setq org-super-agenda-date-format "%A (%e)"
+        org-super-agenda-groups
+        '((:name "Time grid items in all-uppercase with RosyBrown1 foreground"
+                 :time-grid t
+                 :transformer (--> it
+                                   (upcase it)
+                                   (propertize it 'face '(:foreground "RosyBrown1"))))
+          (:name "Priority >= C items underlined, on black background"
+                 :face (:background "black" :underline t)
+                 :not (:priority>= "C")
+                 :order 100))))
+
+(use-package org-sticky-header
+  :straight (org-sticky-header :type git :host github :repo "alphapapa/org-sticky-header")
+  :hook (org-mode . org-sticky-header-mode)
+  :config
+  (org-sticky-header-mode))
 
 ;; elfeed
 (use-package elfeed
   :straight t
   :config
   (setq elfeed-feeds
-        '("https://www.nature.com/nature.rss")))
+        '("https://www.nature.com/nature.rss"
+          "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science"
+          "https://pubmed.ncbi.nlm.nih.gov/rss/search/1fOfQYMp1QUMVg9HoG06sLlkYcemijOCBRLY1dFeN0JogJugEm/?limit=100&utm_campaign=pubmed-2&fc=20250117092618" ;; Twist2
+          "http://rss.sciencedirect.com/publication/science/00928674"
+          "http://elife.elifesciences.org/rss/recent.xml" ;; eLife
+          "https://journals.plos.org/plosbiology/feed/atom" ;; PLoS Biology
+          "http://www.pnas.org/rss/current.xml" ;; PNAS
+          "http://rss.sciencedirect.com/publication/science/22111247"  ;; Cell Reports
+          "https://rss.sciencedirect.com/publication/science/19345909" ;; Cell Stem Cell
+          "https://rss.sciencedirect.com/publication/science/09550674" ;; Curr Opin Cell Biol
+          "https://rss.sciencedirect.com/publication/science/0959437X" ;; Curr Opin Gen Dev
+          "https://rss.sciencedirect.com/publication/science/24523100" ;; Curr Opin Sys Biol
+          "https://journals.biologists.com/rss/site_1000005/1000005.xml" ;; Development
+          "https://rss.sciencedirect.com/publication/science/15345807" ;; Dev Cell
+          "http://www.nature.com/ncomms/current_issue/rss" ;; Nat Comm
+          "http://feeds.nature.com/ng/rss/current" ;; Nat Gen
+          "http://www.nature.com/nmeth/current_issue/rss"
+          "https://pubmed.ncbi.nlm.nih.gov/rss/search/14YzNBPGjPa5Oq-1ALt3vUGjAC4ish-IOxqVHLuo9c-4GVCkY4/?limit=50&utm_campaign=pubmed-2&fc=20250117094320" ;; Rudnicki
+          "https://pubmed.ncbi.nlm.nih.gov/rss/search/1xCFUMSbAMYdtC8KJFgKAIIAYo-4xPQwAHWYwe_JY77Z1dmEg0/?limit=50&utm_campaign=pubmed-2&fc=20250117093424" ;; Shendure
+          "https://pubmed.ncbi.nlm.nih.gov/rss/search/10IsjDYWWF_hcNrfAx1dT3XTb8sIiPJbB2iIh0P8a7fBSSPQPB/?limit=15&utm_campaign=pubmed-2&fc=20250117092818" ;; Freda
+          ))
+  (setq elfeed-search-title-max-width 120))
 (global-set-key (kbd "C-x w") 'elfeed)
+(evil-define-key 'normal elfeed-search-mode-map (kbd "B") 'gw/elfeed-search-browse-background-url)
 
 (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
 (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
@@ -543,30 +622,6 @@
                                 vertico-multiform
                                 vertico-unobtrusive
                                 ))
-  ;; :general
-  ;; (:keymaps '(normal insert visual motion)
-  ;;           "M-." #'vertico-repeat
-  ;;           )
-  ;; (:keymaps 'vertico-map
-  ;;           "<tab>" #'vertico-insert ; Set manually otherwise setting `vertico-quick-insert' overrides this
-  ;;           "<escape>" #'minibuffer-keyboard-quit
-  ;;           "?" #'minibuffer-completion-help
-  ;;           "C-M-n" #'vertico-next-group
-  ;;           "C-M-p" #'vertico-previous-group
-  ;;           ;; Multiform toggles
-  ;;           "<backspace>" #'vertico-directory-delete-char
-  ;;           "C-w" #'vertico-directory-delete-word
-  ;;           "C-<backspace>" #'vertico-directory-delete-word
-  ;;           "RET" #'vertico-directory-enter
-  ;;           "C-i" #'vertico-quick-insert
-  ;;           "C-o" #'vertico-quick-exit
-  ;;           "M-o" #'kb/vertico-quick-embark
-  ;;           "M-G" #'vertico-multiform-grid
-  ;;           "M-F" #'vertico-multiform-flat
-  ;;           "M-R" #'vertico-multiform-reverse
-  ;;           "M-U" #'vertico-multiform-unobtrusive
-  ;;           "C-l" #'kb/vertico-multiform-flat-toggle
-  ;;           )
   :hook ((rfn-eshadow-update-overlay . vertico-directory-tidy) ; Clean up file path when typing
          (minibuffer-setup . vertico-repeat-save) ; Make sure vertico state is saved
          )
@@ -636,35 +691,8 @@
                    "  ")
                  cand)))
   )
-;; (use-package vertico
-;;   :ensure t
-;;   :hook (after-init . vertico-mode)
-;;   :custom
-;;   (vertico-scroll-margin 0)
-;;   (vertico-count 13)
-;;   (vertico-resize t)
-;;   (vertico-cycle t)
-;;   :init
-;;   (vertico-mode))
-;; (use-package savehist
-;;   :init
-;;   (savehist-mode))
-;; (use-package emacs
-;;   :custom
-;;   (enable-recursive-minibuffers t)
-;;   (read-extended-command-predicate #'command-completion-default-include-p)
-;;   :init
-;;   (defun crm-indicator (args)
-;;     (cons (format "[CRM%s] %s"
-;;                   (replace-regexp-in-string
-;;                    "\\`\\[.*?]\\*\\|\\[.*?]\\*\\'" ""
-;;                    crm-separator)
-;;                   (car args))
-;;           (cdr args)))
-;;   (advice-add #'completing-read-multiple :filter-args #'crm-indicator)
-;;   (setq minibuffer-prompt-properties
-;;         '(read-only t cursor-intangible t face minibuffer-prompt))
-;;   (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode))
+(savehist-mode 1)
+(setq savehist-file (expand-file-name "savehist" user-emacs-directory))
 
 (use-package orderless
   :straight t
@@ -672,10 +700,8 @@
   (completion-styles '(orderless))
   (completion-category-defaults nil)
   (completion-category-overrides
-   ('((file (styles basic-remote
-                    orderless
-                    ))
-      ))
+   '((file (styles basic orderless))
+      )
    (orderless-component-separator 'orderless-escapable-split-on-space)
    (orderless-matching-styles
     '(orderless-literal
@@ -689,8 +715,8 @@
       prot-orderless-flex-dispatcher
       ))
    :init
-(defun orderless--strict-*-initialism (component &optional anchored)
-    "Match a COMPONENT as a strict initialism, optionally ANCHORED.
+   (defun orderless--strict-*-initialism (component &optional anchored)
+     "Match a COMPONENT as a strict initialism, optionally ANCHORED.
 The characters in COMPONENT must occur in the candidate in that
 order at the beginning of subsequent words comprised of letters.
 Only non-letters can be in between the words that start with the
@@ -700,42 +726,42 @@ If ANCHORED is `start' require that the first initial appear in
 the first word of the candidate.  If ANCHORED is `both' require
 that the first and last initials appear in the first and last
 words of the candidate, respectively."
-    (orderless--separated-by
-        '(seq (zero-or-more alpha) word-end (zero-or-more (not alpha)))
-      (cl-loop for char across component collect `(seq word-start ,char))
-      (when anchored '(seq (group buffer-start) (zero-or-more (not alpha))))
-      (when (eq anchored 'both)
-        '(seq (zero-or-more alpha) word-end (zero-or-more (not alpha)) eol))))
+     (orderless--separated-by
+         '(seq (zero-or-more alpha) word-end (zero-or-more (not alpha)))
+       (cl-loop for char across component collect `(seq word-start ,char))
+       (when anchored '(seq (group buffer-start) (zero-or-more (not alpha))))
+       (when (eq anchored 'both)
+         '(seq (zero-or-more alpha) word-end (zero-or-more (not alpha)) eol))))
 
-  (defun orderless-strict-initialism (component)
-    "Match a COMPONENT as a strict initialism.
+   (defun orderless-strict-initialism (component)
+     "Match a COMPONENT as a strict initialism.
 This means the characters in COMPONENT must occur in the
 candidate in that order at the beginning of subsequent words
 comprised of letters.  Only non-letters can be in between the
 words that start with the initials."
-    (orderless--strict-*-initialism component))
+     (orderless--strict-*-initialism component))
 
-  (defun prot-orderless-literal-dispatcher (pattern _index _total)
-    "Literal style dispatcher using the equals sign as a suffix.
+   (defun prot-orderless-literal-dispatcher (pattern _index _total)
+     "Literal style dispatcher using the equals sign as a suffix.
 It matches PATTERN _INDEX and _TOTAL according to how Orderless
 parses its input."
-    (when (string-suffix-p "=" pattern)
-      `(orderless-literal . ,(substring pattern 0 -1))))
+     (when (string-suffix-p "=" pattern)
+       `(orderless-literal . ,(substring pattern 0 -1))))
 
-  (defun prot-orderless-strict-initialism-dispatcher (pattern _index _total)
-    "Leading initialism  dispatcher using the comma suffix.
+   (defun prot-orderless-strict-initialism-dispatcher (pattern _index _total)
+     "Leading initialism  dispatcher using the comma suffix.
 It matches PATTERN _INDEX and _TOTAL according to how Orderless
 parses its input."
-    (when (string-suffix-p "," pattern)
-      `(orderless-strict-initialism . ,(substring pattern 0 -1))))
+     (when (string-suffix-p "," pattern)
+       `(orderless-strict-initialism . ,(substring pattern 0 -1))))
 
-  (defun prot-orderless-flex-dispatcher (pattern _index _total)
-    "Flex  dispatcher using the tilde suffix.
+   (defun prot-orderless-flex-dispatcher (pattern _index _total)
+     "Flex  dispatcher using the tilde suffix.
 It matches PATTERN _INDEX and _TOTAL according to how Orderless
 parses its input."
-    (when (string-suffix-p "." pattern)
-      `(orderless-flex . ,(substring pattern 0 -1))))
-  ))
+     (when (string-suffix-p "." pattern)
+       `(orderless-flex . ,(substring pattern 0 -1))))
+   ))
 
 (straight-use-package '(marginalia :type git :host github :repo "minad/marginalia"))
 (setq marginalia-max-relative-age 0)
@@ -745,6 +771,33 @@ parses its input."
 (straight-use-package '(nerd-icons-completion :type git :host github :repo "rainstormstudio/nerd-icons-completion"))
 (nerd-icons-completion-mode)
 (add-hook 'marginalia-mode-hook #'nerd-icons-completion-marginalia-setup)
+
+;; calfw
+(use-package calfw
+  :straight (:files (:defaults "*.el")
+                    :fork (:host github :repo "haji-ali/emacs-calfw")))
+
+(use-package calfw-blocks
+  :straight (:host github
+                   :repo "ml729/calfw-blocks"
+                   :fork (:host github :repo "haji-ali/calfw-blocks")))
+
+;; (use-package maccalfw
+;;   :commands maccalfw-open
+;;   :straight (:host github
+;;                    :repo "haji-ali/maccalfw"
+;;                    :files ("maccalfw.el" ("src" . "src"))))
+(use-package maccalfw
+  :commands maccalfw-open
+  :straight (:host github
+                   :repo "haji-ali/maccalfw"
+                   :branch "ical"
+                   :post-build (with-demoted-errors "Error post-building maccalfw: %S"
+                                 (require 'maccalfw)
+                                 (maccalfw--load-module))
+                   :protocol ssh
+                   :files ("*.el"
+                           ("src" . "src"))))
 
 ;; recentf
 (use-package recentf
@@ -770,6 +823,14 @@ parses its input."
 
 (use-package consult
   :straight (consult :type git :host github :repo "minad/consult"))
+
+(use-package pocket-reader
+  :straight t
+  :config
+  ;; this is required to stop some weird ghost item bug
+  (setq pocket-reader-default-queries '(":unread")))
+(require 'pocket-reader)
+
 
 (require 'server)
 (unless (server-running-p)
