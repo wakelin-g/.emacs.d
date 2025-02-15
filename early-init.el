@@ -17,4 +17,12 @@
 
 (setq package-enable-at-startup t)
 
+(setq default-frame-alist
+      (append default-frame-alist
+              '((left   . 200)
+                (top    . 200)
+                (width  . 130)
+                (height . 31))))
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+
 (add-hook 'after-init-hook (lambda () (set-frame-name "home")))

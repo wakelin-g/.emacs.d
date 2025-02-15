@@ -1,4 +1,5 @@
 ;;; init.el --- Init file -*- lexical-binding: t; -*-
+
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 (setq-default frame-title-format "%b %& emacs")
@@ -97,12 +98,7 @@
 (customize-set-variable 'timu-macos-org-intense-colors nil)
 (customize-set-variable 'timu-macos-scale-org-document-title t)
 (customize-set-variable 'timu-macos-scale-org-document-info t)
-(customize-set-variable 'timu-macos-scale-org-level-1 t)
-(customize-set-variable 'timu-macos-scale-org-level-2 t)
-(customize-set-variable 'timu-macos-scale-org-level-3 t)
 (customize-set-variable 'timu-macos-colors-contrast 'contrasted)
-(customize-set-variable 'timu-macos-mode-line-border-type "none")
-(customize-set-variable 'timu-macos-mode-line-background t)
 (load-theme 'timu-macos t)
 
 ;; evil
@@ -212,6 +208,13 @@
   (define-key inferior-ess-mode-map "\C-cw" 'ess-execute-screen-options)
   :init (require 'ess-site))
 
+;; lua-mode
+(straight-use-package
+ '(lua-mode
+   :type git
+   :files (:defaults (:exclude "init-tryout.el") "lua-mode-pkg.el")
+   :host github :repo "immerrr/lua-mode"))
+
 ;;; DISPLAY OPTIONS
 (global-display-fill-column-indicator-mode 1)
 (global-display-line-numbers-mode 1)
@@ -224,13 +227,6 @@
 (setq show-paren-highlight-openparen t)
 (setq show-paren-when-point-inside-paren t)
 (setq-default truncate-lines t)
-
-(setq default-frame-alist
-      (append default-frame-alist
-              '((left   . 200)
-                (top    . 200)
-                (width  . 150)
-                (height . 30))))
 
 ;;; MODES
 (add-hook 'org-mode-hook
@@ -280,12 +276,7 @@
   :after evil
   :config
   (evil-collection-init))
-(with-eval-after-load 'evil
-  (evil-set-leader '(normal) (kbd "<SPC>"))
-  (evil-define-key 'normal 'global (kbd "<leader>k") 'find-file-in-project)
-  (evil-define-key 'normal 'global (kbd "<leader>f") 'counsel-git-grep)
-  (evil-define-key 'normal 'global (kbd "<leader>s") 'swiper)
-  (evil-define-key 'normal 'global (kbd "<leader>b") 'counsel-switch-buffer))
+
 
 ;; can I set org-mode variables here?
 (setq org-directory "~/orgmode"
@@ -479,18 +470,18 @@
 
 (setq org-capture-templates
       '(("t" "[t]ask" entry (file+headline "~/orgmode/todo.org" "Inbox")
-         "* TODO %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+         "* TODO %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
         ("d" "[d]eadline" entry (file+headline "~/orgmode/deadlines.org" "Deadlines")
-         "* %?\nDEADLINE: %^t\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+         "* %?\nDEADLINE: %^t\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
         ("n" "[n]ote" entry (file+headline "~/orgmode/notes.org" "Notes")
-         "% %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+         "% %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
         ("b" "[b]ookmark" entry (file+headline "~/orgmode/bookmarks.org" "Bookmarks")
-         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
         ("e" "[e]ln" entry (file+function "~/orgmode/eln.org" org-reverse-datetree-goto-date-in-file)
-         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
         ("p" "[p]lanner" entry (file+function "~/orgmode/planner.org" org-reverse-datetree-goto-date-in-file)
-         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
-        ("s" "[s]hopping" checkitem (file+olp "~/orgmode/shopping.org" "Shopping")
+         "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines-after 1)
+        ("s" "[s]hopping" checkitem (file "~/orgmode/shopping.org")
          "+ [ ] %?")))
 (add-hook 'org-mode-hook #'toggle-word-wrap)
 ;;(setq org-startup-folded t)
@@ -554,6 +545,9 @@
   :config
   (org-sticky-header-mode))
 
+(use-package magit
+  :straight (magit :type git :files ("lisp/magit*.el" "lisp/git-*.el" "docs/magit.texi" "docs/AUTHORS.md" "LICENSE" ".dir-locals.el" (:exclude "lisp/magit-section.el") "magit-pkg.el") :host github :repo "magit/magit"))
+
 ;; elfeed
 (use-package elfeed
   :straight t
@@ -582,7 +576,6 @@
           ))
   (setq elfeed-search-title-max-width 120))
 (global-set-key (kbd "C-x w") 'elfeed)
-(evil-define-key 'normal elfeed-search-mode-map (kbd "B") 'gw/elfeed-search-browse-background-url)
 
 (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
 (add-to-list 'evil-emacs-state-modes 'elfeed-show-mode)
@@ -801,6 +794,7 @@ parses its input."
 
 ;; recentf
 (use-package recentf
+  :straight nil
   :custom
   (recentf-save-file (expand-file-name "recentf" user-emacs-directory))
   (recentf-max-saved-items 200)
@@ -836,12 +830,26 @@ parses its input."
 (unless (server-running-p)
   (server-start))
 
+;; keymap
+
+;;; evil-mode
+(with-eval-after-load 'evil
+  (evil-set-leader '(normal) (kbd "<SPC>"))
+  (evil-define-key 'normal 'global (kbd "<leader>k") 'find-file-in-project)
+  (evil-define-key 'normal 'global (kbd "<leader>f") 'counsel-git-grep)
+  (evil-define-key 'normal 'global (kbd "<leader>s") 'swiper)
+  (evil-define-key 'normal 'global (kbd "<leader>b") 'counsel-switch-buffer))
+(evil-define-key 'normal elfeed-search-mode-map (kbd "B") 'gw/elfeed-search-browse-background-url)
+
+;;; global
+(global-set-key (kbd "C-x k") 'gw/kill-this-buffer)
+(global-set-key (kbd "C-c rr") 'gw/org-roam-rg-search)
+(global-set-key (kbd "C-c ri") 'org-roam-node-insert)
+
+;; load other config files
 (load (expand-file-name "gw-funcs.el" user-emacs-directory))
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
 
-(global-set-key (kbd "C-x k") 'gw/kill-this-buffer)
-(global-set-key (kbd "C-c rr") 'gw/org-roam-rg-search)
-(global-set-key (kbd "C-c ri") 'org-roam-node-insert)
 
 ;;; init.el ends here
