@@ -177,3 +177,22 @@ For example, * TODO ItemA -> * DONE TODO ItemA"
           entries)
     (unless (or elfeed-search-remain-on-entry (use-region-p))
       (forward-line))))
+
+(defun gw/org-refile-to-planner (arg)
+  (interactive "P")
+  (org-reverse-datetree-refile-to-file "~/orgmode/planner.org" arg))
+(defun gw/org-refile-to-planner-today (arg)
+  (interactive "P")
+  (org-reverse-datetree-refile-to-file "~/orgmode/planner.org" (current-time)))
+
+(defun gw/finder-path ()
+  "Return path of frontmost Finder window, or empty string.
+
+Asks Finder for the path using AppleScript via `osascript', so
+this can take a second or two to execute."
+  (let ($applescript $result)
+    (setq $applescript "tell application \"Finder\" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)")
+    (setq $result (ns-do-applescript $applescript))
+    (if $result
+        (string-trim $result)
+      "")))

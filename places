@@ -1,0 +1,72 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/Users/griffen/orgmode/planner.org" . 364)
+ ("/Users/griffen/orgmode/notes.org" . 16572)
+ ("/Users/griffen/orgmode/todo.org" . 1001)
+ ("/Users/griffen/.emacs.d/config/theme.el" . 1284)
+ ("/Users/griffen/.elfeed/index" . 856397)
+ ("/Users/griffen/.emacs.d/"
+  (dired-filename . "/Users/griffen/.emacs.d/transient"))
+ ("/Users/griffen/.emacs.d/init.el" . 255)
+ ("/Users/griffen/.emacs.d/config/org-mode.el" . 8683)
+ ("/Users/griffen/.emacs.d/config/popup.el" . 85)
+ ("/Users/griffen/orgmode/todo.org_archive" . 85)
+ ("/Users/griffen/Documents/"
+  (dired-filename . "/Users/griffen/Documents/science.aas9536.pdf.md5"))
+ ("/Users/griffen/Documents/stz-mice-use.org" . 23)
+ ("/Users/griffen/orgmode/"
+  (dired-filename . "/Users/griffen/orgmode/notes.org"))
+ ("/Users/griffen/orgmode/shopping.org" . 425)
+ ("/Users/griffen/images/"
+  (dired-filename . "/Users/griffen/images/Rplots.pdf"))
+ ("/Users/griffen/.emacs.d/gw-funcs.el" . 6584)
+ ("/Users/griffen/.emacs.d/config/keybinds.el" . 463)
+ ("/Users/griffen/.emacs.d/config/utils.el" . 668)
+ ("/Users/griffen/images/plot_intensities.org" . 186)
+ ("/Users/griffen/.emacs.d/config/minibuffer.el" . 6533)
+ ("/Users/griffen/.emacs.d/config/ui.el" . 131)
+ ("/Users/griffen/images/177_intensities.csv" . 12363)
+ ("/Users/griffen/images/126_intensities.csv" . 209)
+ ("/Users/griffen/"
+  (dired-filename . "/Users/griffen/dal_cs_db_password"))
+ ("/Volumes/"
+  (dired-filename . "/Volumes/FS"))
+ ("/Users/griffen/.emacs.d/config/core.el" . 1458)
+ ("/Users/griffen/.emacs.d/early-init.el" . 1562)
+ ("/Users/"
+  (dired-filename . "/Users/griffen"))
+ ("/Users/griffen/.emacs.d/config/dired.el" . 1882)
+ ("/Users/griffen/.emacs.d/config/modeline.el" . 596)
+ ("/"
+  (dired-filename . "/Users"))
+ ("/Users/Shared/"
+  (dired-filename . "/Users/Shared/Numi"))
+ ("/Users/griffen/.emacs.d/config/rss.el" . 45)
+ ("/Users/griffen/.emacs.d/config/"
+  (dired-filename . "/Users/griffen/.emacs.d/config/rss.el"))
+ ("/Users/griffen/Library/"
+  (dired-filename . "/Users/griffen/Library/Cookies"))
+ ("/Applications/"
+  (dired-filename . "/Applications/.."))
+ ("/Applications/Fiji.app/"
+  (dired-filename . "/Applications/Fiji.app/.."))
+ ("/Applications/Fiji.app/macros/"
+  (dired-filename . "/Applications/Fiji.app/macros/.."))
+ ("/Applications/Fiji.app/scripts/"
+  (dired-filename . "/Applications/Fiji.app/scripts/.."))
+ ("/Applications/Fiji.app/plugins/"
+  (dired-filename . "/Applications/Fiji.app/plugins/.."))
+ ("/Applications/Fiji.app/plugins/Macros/"
+  (dired-filename . "/Applications/Fiji.app/plugins/Macros/.."))
+ ("/Users/griffen/.emacs.d/eshell/alias" . 57)
+ ("/Users/griffen/.emacs.d/config/completion.el" . 647)
+ ("/Users/griffen/.emacs.d/custom.el" . 2362)
+ ("/Users/griffen/bin/"
+  (dired-filename . "/Users/griffen/bin/.."))
+ ("/Users/griffen/convert/"
+  (dired-filename . "/Users/griffen/convert/.."))
+ ("/Users/griffen/orgmode/gym.org" . 43)
+ ("/Users/griffen/orgmode/pax7.org" . 1685)
+ ("/Users/griffen/orgmode/ltximg/"
+  (dired-filename . "/Users/griffen/orgmode/ltximg/.."))
+ ("/Users/griffen/.emacs.d/config/calfw.el" . 4064)
+ ("/Users/griffen/orgmode/bookmarks.org" . 309))

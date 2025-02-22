@@ -2,12 +2,16 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored" (filename . "~/orgmode/todo.org")
- (front-context-string . "** TODO Get larg")
- (rear-context-string . "0:11]\n   :END:\n\n") (position . 157)
- (last-modified 26542 49861 653569 0))
-("org-refile-last-stored" (filename . "~/orgmode/todo.org")
- (front-context-string . "** TODO [#A] Boo")
- (rear-context-string . "w/ tax.\n* Other\n") (position . 1379)
- (last-modified 26542 19653 209197 0))
+(("org-capture-last-stored"
+ (filename . "~/orgmode/todo.org")
+ (front-context-string . "** TODO [#A] Tre")
+ (rear-context-string . "parently.\n:END:\n")
+ (position . 1271)
+ (last-modified 26552 58450 916762 0))
+("org-refile-last-stored"
+ (filename . "~/orgmode/todo.org")
+ (front-context-string . "** TODO [#A] Cha")
+ (rear-context-string . "i 16:22]\n:END:\n\n")
+ (position . 1189)
+ (last-modified 26552 58494 702216 0))
 )
