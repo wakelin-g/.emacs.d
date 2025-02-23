@@ -24,3 +24,9 @@
 
 (use-package reveal-in-osx-finder
   :straight t)
+
+;; fix path bug with gui emacs
+(use-package exec-path-from-shell
+  :straight t)
+(when (eq system-type 'darwin)
+  (exec-path-from-shell-initialize))
