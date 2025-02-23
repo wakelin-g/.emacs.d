@@ -16,11 +16,11 @@
 
 ;; macOS key modifiers
 (setq mac-command-modifier 'meta) ;; make cmd meta
-(setq mac-option-modifier nil) ;; make opt key nothing
+(setq mac-option-modifier 'super) ;; make opt key super
 
 ;; global defaults
 (setq-default
- fill-column 80
+ fill-column 100 ;; especially for olivetti-mode, 80 isn't enough
  word-wrap t
  indent-tabs-mode nil
  require-final-newline t
@@ -49,9 +49,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; more useful frame title
-(setq frame-title-format '((:eval (if (buffer-file-name)
-                                      (abbreviate-file-name (buffer-file-name))
-                                    "%b"))))
+;; (setq frame-title-format '((:eval (if (buffer-file-name)
+;;                                       (abbreviate-file-name (buffer-file-name))
+;;                                     "%b"))))
+(setq frame-title-format '((:eval (format "%s" (cdr (assoc 'name (tab-bar--current-tab)))))))
 
 ;; backups
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups"))
@@ -106,16 +107,10 @@
 (setq-default indent-tabs-mode nil)
 
 ;; font
-;; (set-face-attribute 'default nil
-;;                     :family "RobotoMono Nerd Font Mono"
-;;                     :height 200)
-;; (set-face-attribute 'fixed-pitch nil
-;;                     :family "RobotoMono Nerd Font Mono"
-;;                     :height 200)
-;; (set-face-attribute 'variable-pitch nil
-;;                     :family "RobotoMono Nerd Font Mono"
-;;                     :height 200)
-
-(set-face-attribute 'default nil :family "Iosevka" :height 200)
-(set-face-attribute 'variable-pitch nil :family "Iosevka Aile" :height 200)
+(set-face-attribute 'default nil
+                    :family "IosevkaTerm Nerd Font Mono"
+                    :height 200)
+(set-face-attribute 'variable-pitch nil
+                    :family "Iosevka Aile"
+                    :height 200)
 
