@@ -39,6 +39,18 @@
               "^.[^#].+el$"))
      (load-file file))
 
-(load custom-file 'noerror)
+(load custom-file :no-error-if-file-is-missing)
+
+;; so this works if I do it here but not in the config/theme.el....
+(add-hook 'server-after-make-frame-hook (lambda ()
+                                          (modify-all-frames-parameters
+                                           '((right-divider-width . 40)
+                                             (internal-border-width . 25)))
+                                          (dolist (face '(window-divider
+                                                          window-divider-first-pixel
+                                                          window-divider-last-pixel))
+                                            (face-spec-reset-face face)
+                                            (set-face-foreground face (face-attribute 'default :background)))
+                                          (set-face-background 'fringe (face-attribute 'default :background))))
 
 ;;; init.el ends here
