@@ -1,6 +1,8 @@
 ;;; -*- lexical-binding: t -*-
 
-(straight-use-package '(org :type built-in))
+(use-package org
+  :straight '(org :type built-in)
+  :ensure t)
 
 (add-hook 'org-mode-hook 'org-appear-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
@@ -21,45 +23,60 @@
 (custom-declare-face '+org-todo-onhold '((t (:inherit (bold warning org-todo)))) "")
 (custom-declare-face '+org-todo-cancel '((t (:inherit (bold error org-todo)))) "")
 
-(setq org-directory                        "~/orgmode"
+(setq org-directory                         "~/orgmode"
       ;; org-refile-targets '((org-agenda-files :maxlevel .5))
-      org-refile-use-outline-path          t
-      org-agenda-files                     '("todo.org" "planner.org")
-      org-agenda-tags-column               0
-      org-ellipsis                         "…"
-      org-log-into-drawer                  t
-      org-log-done                         t
-      org-log-redeadline                   'time
-      org-enforce-todo-dependencies        t
-      org-log-reschedule                   'time
-      org-use-property-inheritance         t
-      org-startup-with-inline-images       t
-      org-startup-indented                 t
-      org-adapt-indentation                t
-      org-hide-leading-stars               nil
-      org-confirm-babel-evaluate           nil
-      org-pretty-entities                  t
-      org-return-follows-links             t
-      org-src-fontify-natively             t
-      org-src-tab-acts-natively            t
-      org-fontify-done-headline            t
-      org-fontify-quote-and-verse-blocks   t
-      org-fontify-whole-heading-line       t
-      org-edit-src-content-indentation     0
-      org-fold-catch-invisible-edits       'show-and-error
-      org-special-ctrl-a/e                 t
-      org-auto-align-tags                  nil
-      org-tags-column                      0
-      org-insert-heading-respect-content   t
-      org-appear-autoemphasis              t
-      org-appear-autolinks                 t
-      org-appear-autosubmarkers            t
-      org-hide-emphasis-markers            t
-      org-appear-trigger                   'manual
-      org-startup-folded                   t
+      org-refile-use-outline-path           t
+      org-agenda-files                      '("todo.org" "planner.org")
+      org-agenda-tags-column                0
+      org-ellipsis                          "…"
+      org-log-into-drawer                   t
+      org-log-done                          t
+      org-log-redeadline                    'time
+      org-enforce-todo-dependencies         t
+      org-log-reschedule                    'time
+      org-use-property-inheritance          t
+      org-startup-with-inline-images        t
+      org-startup-indented                  t
+      org-adapt-indentation                 t
+      org-hide-leading-stars                nil
+      org-confirm-babel-evaluate            nil
+      org-pretty-entities                   t
+      org-return-follows-links              t
+      org-src-fontify-natively              t
+      org-src-tab-acts-natively             t
+      org-fontify-done-headline             t
+      org-fontify-quote-and-verse-blocks    t
+      org-fontify-whole-heading-line        t
+      org-edit-src-content-indentation      0
+      org-fold-catch-invisible-edits        'show-and-error
+      org-special-ctrl-a/e                  t
+
+      ;; these are new
+      org-agenda-search-view-always-boolean t
+      org-agenda-restore-windows-after-quit t
+      org-agenda-show-future-repeats        nil
+      org-agenda-window-setup               'current
+      org-agenda-span                       'day
+      org-agenda-skip-deadline-prewarning-if-scheduled t
+      org-agenda-skip-scheduled-if-done     t
+      org-agenda-skip-deadline-if-done      t
+      org-agenda-dim-blocked-tasks          t
+      org-agenda-format-date                "\n%A, %-e %B %Y"
+      org-deadline-warning-days             3
+      org-auto-align-tags                   nil
+      org-tags-column                       0
+      org-insert-heading-respect-content    t
+      org-appear-autoemphasis               t
+      org-appear-autolinks                  t
+      org-appear-autosubmarkers             t
+      org-hide-emphasis-markers             t
+      org-appear-trigger                    'manual
+      org-startup-folded                    t
       ;; org-todo-keywords
       ;; (quote ((sequence "TODO(t)" "NEXT(t)" "|" "DONE(d)")
       ;;         (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)")))
+
+      ;; from doom
       org-todo-keywords
       '((sequence
          "TODO(t)"  ; A task that needs doing & is ready to do
@@ -149,17 +166,20 @@
                 "%Y W%W"
                 "%Y-%m-%d %A"))
 
+
 ;; roam
+(setq org-roam-directory (file-truename "~/orgmode/roam")
+        org-attach-id-dir "assets/"
+        org-link-frame-setup
+        '((file . find-file)))
 (use-package org-roam
   :straight t
+  :ensure t
   :after org
   :bind (("C-c r i" . org-roam-node-insert)
          ("C-c r l" . org-roam-buffer-toggle)
          ("C-c r f" . org-roam-node-find))
   :config
-  (setq org-roam-directory (file-truename "~/orgmode/roam")
-        
-        org-attach-id-dir "assets/")
   (org-roam-db-autosync-enable))
 
 (use-package org-roam-ui
@@ -210,6 +230,31 @@
   :config
   (org-sticky-header-mode))
 
-(defadvice org-agenda (around split-vertically activate)
-  (let ((split-window-threshold nil))
-    ad-do-it))
+(defvar gw/org-width 100)
+(defvar gw/org-agenda-width gw/org-width)
+(setq org-agenda-block-separator (make-string gw/org-agenda-width (string-to-char "━")))
+(defun gw/display-buffer-org-agenda-managed-p (buffer-name action)
+  "Determine whether BUFFER-NAME is an org-agenda managed buffer."
+  (with-current-buffer buffer-name
+    (and (derived-mode-p 'org-mode)
+         (member (buffer-file-name) (org-agenda-files)))))
+(add-to-list 'display-buffer-alist
+             `("\\*Org Agenda\\*"
+               (display-buffer-in-tab
+                display-buffer-reuse-mode-window)
+               (ignore-current-tab . t)
+               (tab-name . "Org Agenda")
+               (window-width . ,gw/org-agenda-width)
+               (dedicated . side)
+               (side . left)
+               (inhibit-same-window . nil)))
+(add-to-list 'display-buffer-alist
+             '(gw/display-buffer-org-agenda-managed-p
+               (display-buffer-reuse-mode-window
+                display-buffer-in-tab)
+               (tab-name . "Org Agenda")))
+
+;; olivetti-mode -- balance left/right margin sizes based on fill-column
+(use-package olivetti 
+  :straight t
+  :hook (org-mode . olivetti-mode))
