@@ -99,3 +99,25 @@
 
 (add-hook 'cfw:calendar-mode-hook 'display-line-numbers-mode)
 
+(defun gw/side-by-side-agenda-view ()
+  (progn
+    (org-agenda nil "a")
+    (split-window-right)
+    (org-agenda-redo)
+    (split-window-below)
+    (other-window 1)
+    (cfw:open-org-calendar)
+    (setq org-agenda-sticky t)
+    (other-window 1)
+    (org-agenda nil "p")
+    (setq org-agenda-sticky nil)))
+(defun gw/show-my-agenda ()
+  (interactive)
+  (let ((tab-bar-index (tab-bar--tab-index-by-name "Agenda")))
+    (if tab-bar-index
+        (tab-bar-select-tab (+ tab-bar-index 1))
+      (progn
+        (tab-bar-new-tab)
+        (tab-bar-rename-tab "Agenda")
+        (gw/side-by-side-agenda-view)
+        (message "Agenda loaded")))))
