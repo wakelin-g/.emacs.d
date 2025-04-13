@@ -1,0 +1,21 @@
+(defun gw/remote-shell-buffer (buffer)
+  (interactive "sBuffer: ")
+  (pop-to-buffer (concat "*" buffer "*"))
+  (unless (eq major-mode 'shell-mode)
+    (dired buffer)
+    (shell buffer)
+    (sleep-for 0 200)
+    (delete-region (point-min) (point-max))
+    (comint-simple-send (get-buffer-process (current-buffer))
+                        (concat "export PS1=\"\033[33m" buffer "\033[0m:\033[35m\\W\033[0m>\""))))
+
+(defun gw/remote-shell-jlab ()
+  (interactive)
+  (let ((default-directory "/ssh:jlab:~/"))
+    (shell)))
+
+(defun gw/spawn-shell (name)
+  "Create a new shell buffer."
+  (interactive "MName of shell buffer to create: ")
+  (pop-to-buffer (get-buffer-create (generate-new-buffer-name name)))
+  (shell (current-buffer)))

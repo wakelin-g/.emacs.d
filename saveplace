@@ -1,0 +1,430 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/Users/griffen/Dropbox/org/" . 29)
+ ("/Users/griffen/Dropbox/org/calendar.org" . 31)
+ ("/Users/griffen/Dropbox/org/reminders.org" . 353)
+ ("/Users/griffen/Dropbox/org/todo.org_archive" . 51651)
+ ("/Users/griffen/.emacs.d/lisp/org.el" . 22456)
+ ("/Users/griffen/Dropbox/org/todo.org" . 49925)
+ ("/Users/griffen/.emacs.d/reference.org" . 3848)
+ ("/Users/griffen/.emacs.d/lisp/keybinds.el" . 205)
+ ("/Users/griffen/Dropbox/org/eln.org" . 231)
+ ("/opt/homebrew/Cellar/emacs-plus@29/29.4/share/emacs/29.4/lisp/filenotify.el" . 6322)
+ ("/Users/griffen/Dropbox/org/pax7.org" . 3390)
+ ("/Users/griffen/.emacs.d/"
+  (dired-filename . "/Users/griffen/.emacs.d/lisp"))
+ ("/Users/griffen/Dropbox/org/webpages.org" . 4311)
+ ("/Users/griffen/.emacs.d/gw-funcs.el" . 10828)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/human-diabetic-wounds/proc.py" . 660)
+ ("/Users/griffen/Dropbox/org/scratch.org" . 106)
+ ("/Users/griffen/.emacs.d/lisp/major-modes.el" . 3383)
+ ("/Users/griffen/.emacs.d/elfeed/index" . 1669310)
+ ("/Users/griffen/.emacs.d/lisp/theme.el" . 2887)
+ ("/Users/griffen/scratch/wakelin-g.github.io/pages/notebooks/NCB2017_ligands_receptors.qmd" . 877)
+ ("/Users/griffen/scratch/wakelin-g.github.io/pages/"
+  (dired-filename . "/Users/griffen/scratch/wakelin-g.github.io/pages/resources.html"))
+ ("/Users/griffen/Dropbox/org/temp/"
+  (dired-filename . "/Users/griffen/Dropbox/org/temp/banana.org"))
+ ("/Users/griffen/personal/"
+  (dired-filename . "/Users/griffen/personal/genome_Griffen_Wakelin_v5_Full_20250205062622.zip.gpg"))
+ ("/Users/griffen/Dropbox/org/roam/"
+  (dired-filename . "/Users/griffen/Dropbox/org/roam/20250309151420-timeouts.org"))
+ ("/Users/griffen/Dropbox/org/lab/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/joel-pde10a"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/merged.h5ad"))
+ ("/Users/griffen/Downloads/figures/"
+  (dired-filename . "/Users/griffen/Downloads/figures/tsnehaensel-2020-il6st-colorbar.svg"))
+ ("/Users/griffen/.emacs.d/lisp/utils.el" . 2578)
+ ("/Users/griffen/scratch/wakelin-g.github.io/pages/resources.html" . 3270)
+ ("/Users/griffen/scratch/wakelin-g.github.io/"
+  (dired-filename . "/Users/griffen/scratch/wakelin-g.github.io/pages"))
+ ("/Users/griffen/scratch/"
+  (dired-filename . "/Users/griffen/scratch/wakelin-g.github.io"))
+ ("/Users/griffen/"
+  (dired-filename . "/Users/griffen/scratch"))
+ ("/Users/griffen/Downloads/"
+  (dired-filename . "/Users/griffen/Downloads/de-micheli-analysis-joel"))
+ ("/Users/griffen/Downloads/de-micheli-analysis-joel/"
+  (dired-filename . "/Users/griffen/Downloads/de-micheli-analysis-joel/GSE143437_DeMicheli_MuSCatlas_normalizeddata.txt.gz"))
+ ("/Users/griffen/Downloads/de-micheli-analysis-joel/report.qmd" . 878)
+ ("/Users/"
+  (dired-filename . "/Users/griffen"))
+ ("/Users/griffen/Dropbox/org/roam/20250330144515-pgp.org" . 2818)
+ ("/Users/griffen/.emacs.d/lisp/eshell.el" . 215)
+ ("/Users/griffen/.emacs.d/lisp/funcs-common.el" . 93)
+ ("/Users/griffen/Dropbox/org/roam/reference/"
+  (dired-filename . "/Users/griffen/Dropbox/org/roam/reference/cherief_2023.org"))
+ ("/Users/griffen/Dropbox/org/notes.org" . 15354)
+ ("/Users/griffen/Dropbox/org/temp/cantaloupe.org" . 20)
+ ("/Users/griffen/Dropbox/org/temp/banana.org" . 43)
+ ("/Users/griffen/Dropbox/org/temp/apple.org" . 15)
+ ("/Users/griffen/Downloads/figures/tsnehaensel-2020-il6st-colorbar.svg" . 30977)
+ ("/Users/griffen/Downloads/figures/tsnehaensel-2020-osmr-colorbar.svg" . 1606)
+ ("/Users/griffen/.emacs.d/lisp/dired.el" . 32)
+ ("/Users/griffen/Dropbox/org/lab/seminars/abdallah-alshanti-20250327.org" . 1450)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/wounded3/" . 320)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020"))
+ ("/ssh:jlab:/home/griffen/mnt/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2"))
+ ("/ssh:jlab:/home/griffen/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/wounded2/" . 234)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/wounded1/" . 234)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/unwounded2/" . 236)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/unwounded1/" . 236)
+ ("/Users/griffen/Dropbox/org/lab/seminars/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/seminars/wali-khan-20250318.org"))
+ ("/Users/griffen/Dropbox/org/lab/seminars/yves-dekoninck-20250325.org" . 507)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D30"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D30/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D30/PWH26D30_barcodes.tsv.gz"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D0/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D0/PWH26D0_barcodes.tsv.gz"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717082_PWH26D30/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717082_PWH26D30/__MACOSX"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717081_PWH26D7/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717081_PWH26D7/__MACOSX"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717080_PWH26D1/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717080_PWH26D1/__MACOSX"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717079_PWH26D0/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/GSM7717079_PWH26D0/__MACOSX"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor4/" . 587)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor3/" . 587)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor1/" . 74)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor2/" . 74)
+ ("/Users/griffen/.emacs.d/snippets/org-mode/seminar" . 162)
+ ("/Users/griffen/Dropbox/org/insurance.org" . 327)
+ ("/Users/griffen/Dropbox/org/experiments.org" . 330)
+ ("/Users/griffen/Dropbox/org/lab/qpcr/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/qpcr/qpcr-primer-workup.org"))
+ ("/Users/griffen/Dropbox/org/lab/qpcr/qpcr-results-20250228/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/qpcr/qpcr-results-20250228/GSR Lab_2025-02-28 19-15-57_CT003237 -  ANOVA Results_ANOVA.csv"))
+ ("/Users/griffen/Dropbox/org/bookmarks.org" . 24)
+ ("/Users/griffen/Dropbox/org/attachments/"
+  (dired-filename . "/Users/griffen/Dropbox/org/attachments/benefits-booklet.pdf"))
+ ("/Users/griffen/Dropbox/org/lab/qpcr/qpcr-calculations/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/qpcr/qpcr-calculations/qpcr-calculations-20250227.html"))
+ ("/Users/griffen/Dropbox/org/lab/eln/" . 52)
+ ("/Users/griffen/Dropbox/org/lab/western-blot-reagents.org" . 47)
+ ("/Users/griffen/Dropbox/org/lab/bulk-rna-seq-analysis.org" . 1683)
+ ("/Users/griffen/Dropbox/org/noter/" . 50)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/falco_outputs/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/falco_outputs/sample002_fastqc_report.html"))
+ ("/Users/griffen/.emacs.d/snippets/org-mode/"
+  (dired-filename . "/Users/griffen/.emacs.d/snippets/org-mode/slurm-header"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/prepare_files" . 428)
+ ("/Users/griffen/Dropbox/org/roam/reference/li_2019b.org" . 3317)
+ ("/Users/griffen/Dropbox/org/lab/development-review-2025.org" . 852)
+ ("/Users/griffen/Dropbox/org/lab/sommer-2018/osm_counts_deseq.png" . 2263)
+ ("/Users/griffen/.emacs.d/snippets/org-mode/basic-ggplot" . 65)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/download_data.sh" . 113)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/bamfiles/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/bamfiles/20151008_A-sample001_pool1_R1_subread.bam"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/falco_outputs"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastqs_trimmed/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastqs_trimmed/20151008_A-sample006_pool1_R1.fastp.html"))
+ ("/Users/griffen/.emacs.d/snippets/org-mode/slurm-header" . 239)
+ ("/Users/griffen/.emacs.d/snippets/"
+  (dired-filename . "/Users/griffen/.emacs.d/snippets/org-mode"))
+ ("/Users/griffen/Dropbox/org/roam/20250322132850-spatial_statistics.org" . 128)
+ ("/Users/griffen/.emacs.d/early-init.el" . 1562)
+ ("/Users/griffen/.emacs.d/elfeed-feeds.org" . 2239)
+ ("/Users/griffen/.emacs.d/straight/"
+  (dired-filename . "/Users/griffen/.emacs.d/straight/build"))
+ ("/Users/griffen/.emacs.d/lisp/pretty-latex.el" . 34761)
+ ("/Users/griffen/Dropbox/org/lab/delete-this-later.org" . 1197)
+ ("/Users/griffen/.emacs.d/lisp/setup-modeline.el" . 3878)
+ ("/Users/griffen/singlecelldata/"
+  (dired-filename . "/Users/griffen/singlecelldata/bulk"))
+ ("/Users/griffen/.emacs.d/lisp/ess.el" . 332)
+ ("/Users/griffen/.emacs.d/init.el" . 2512)
+ ("/Users/griffen/.emacs.d/lisp/minibuffer.el" . 343)
+ ("/Users/griffen/.emacs.d/lisp/ui.el" . 665)
+ ("/Users/griffen/.emacs.d/lisp/better-buffers.el" . 98)
+ ("/Users/griffen/.emacs.d/lisp/setup-reading.el" . 5644)
+ ("/Users/griffen/.emacs.d/lisp/web.el" . 633)
+ ("/Users/griffen/.emacs.d/auto-save-list/" . 56)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastqs/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastqs/20151008_A-sample001_pool1_R1.fastq.gz"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/run_fastp.sh" . 1317)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastp_logs/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/fastp_logs/20151008_A-sample001_pool1_R1.fastp.log"))
+ ("/Users/griffen/.emacs.d/lisp/remote.el" . 110)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/*scratch*" . 73)
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/ncb-2017/comparisons/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/ncb-2017/comparisons/tw2_overexpression_gm_dm.csv"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/genesdev-2019/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/genesdev-2019/dump"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/smmcs-2019/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/smmcs-2019/dump"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/fn14-myogenesis-lsa2023/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/fn14-myogenesis-lsa2023/dump"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/microarray-human-skeletal-muscle/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/microarray-human-skeletal-muscle/E-CBIL-30-DM2_1-Affymetrix_MAS_5.0_Probe_Cell_Analysis-biotin.CEL"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/elements-backup/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/elements-backup/Elements"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/li_2019_tw2_chipseq/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/li_2019_tw2_chipseq/bowtie_index"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/230214_A00784_0672_AHKM27DSX5_Johnston_Adam/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/230214_A00784_0672_AHKM27DSX5_Johnston_Adam/Johnston_Adam__S1-dbdb-uninjured-nerves"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/ncb-2017"))
+ ("/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/ncb-2017/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd1/bulk-rna-seq-data/tw2-muscle/ncb-2017/gencode.vM10.annotation.gff3"))
+ ("/Users/griffen/Downloads/ReminderScripts/"
+  (dired-filename . "/Users/griffen/Downloads/ReminderScripts/File.txt"))
+ ("/ssh:jlab:/home/griffen/.zshrc" . 560)
+ ("/ssh:jlab:/home/griffen/.zshrc_exports" . 80)
+ ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/falco-1.2.5/"
+  (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/falco-1.2.5/Configuration"))
+ ("/Users/griffen/singlecelldata/bulk/"
+  (dired-filename . "/Users/griffen/singlecelldata/bulk/comparisons"))
+ ("/Users/griffen/.zsh_sessions/"
+  (dired-filename . "/Users/griffen/.zsh_sessions/9BE325C1-9160-4918-8480-F5029CB72A34.session"))
+ ("/Users/griffen/Documents/hSC_alamarBlue_20241201GW/"
+  (dired-filename . "/Users/griffen/Documents/hSC_alamarBlue_20241201GW/.Rproj.user"))
+ ("/Users/griffen/Documents/apartment/"
+  (dired-filename . "/Users/griffen/Documents/apartment/CosignFilledGW.pdf"))
+ ("/Users/griffen/Documents/League of Legends/"
+  (dired-filename . "/Users/griffen/Documents/League of Legends/Replays"))
+ ("/Users/griffen/Documents/.imaris_cache/"
+  (dired-filename . "/Users/griffen/Documents/.imaris_cache/singlefibre_pax7_3nuclei.tif"))
+ ("/Users/griffen/Documents/$RECYCLE.BIN/"
+  (dired-filename . "/Users/griffen/Documents/$RECYCLE.BIN/desktop.ini"))
+ ("/Users/griffen/Documents/r-other/"
+  (dired-filename . "/Users/griffen/Documents/r-other/.Rproj.user"))
+ ("/Users/griffen/Documents/counting.numbers" . 157)
+ ("/Users/griffen/Documents/hwstyle.tex" . 531)
+ ("/Users/griffen/Documents/images/"
+  (dired-filename . "/Users/griffen/Documents/images/singlefibre_pax7_3nuclei.jpg"))
+ ("/Users/griffen/Documents/invoices/"
+  (dired-filename . "/Users/griffen/Documents/invoices/august24"))
+ ("/Users/griffen/Documents/applications/"
+  (dired-filename . "/Users/griffen/Documents/applications/animal_care"))
+ ("/Users/griffen/Documents/protocols/"
+  (dired-filename . "/Users/griffen/Documents/protocols/culture"))
+ ("/Users/griffen/Documents/papers/"
+  (dired-filename . "/Users/griffen/Documents/papers/innervation"))
+ ("/Users/griffen/.R/"
+  (dired-filename . "/Users/griffen/.R/Makevars"))
+ ("/Users/griffen/Downloads/LSRI_Orientation_Review_Material_October_2019/"
+  (dired-filename . "/Users/griffen/Downloads/LSRI_Orientation_Review_Material_October_2019/4. G13_ Procedures for Escaped Rodents.doc"))
+ ("/Users/griffen/Downloads/OneDrive_1_12-18-2023/"
+  (dired-filename . "/Users/griffen/Downloads/OneDrive_1_12-18-2023/Specimen_001_WT_001.fcs"))
+ ("/Users/griffen/Downloads/OneDrive_1_2024-08-03/"
+  (dired-filename . "/Users/griffen/Downloads/OneDrive_1_2024-08-03/240521 GW muscle dig td for seqt"))
+ ("/Users/griffen/Downloads/Plasmidsauras_Twist2flox_Sequencing/"
+  (dired-filename . "/Users/griffen/Downloads/Plasmidsauras_Twist2flox_Sequencing/SGJHBR_results"))
+ ("/Users/griffen/Downloads/desktopitemsfeb202024/"
+  (dired-filename . "/Users/griffen/Downloads/desktopitemsfeb202024/.DS_Store"))
+ ("/Users/griffen/Downloads/nail/"
+  (dired-filename . "/Users/griffen/Downloads/nail/AlizarinRedStain1987.pdf"))
+ ("/Users/griffen/Downloads/paigedata_2025/"
+  (dired-filename . "/Users/griffen/Downloads/paigedata_2025/.Rproj.user"))
+ ("/Users/griffen/Downloads/qpcr/"
+  (dired-filename . "/Users/griffen/Downloads/qpcr/GSM628065_06_03_10_6a.txt"))
+ ("/Users/griffen/Downloads/rnaseq_heterotopic_ossification/"
+  (dired-filename . "/Users/griffen/Downloads/rnaseq_heterotopic_ossification/.DS_Store"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/GSE241132_cell_metadata.txt.gz"))
+ ("/Users/griffen/Downloads/wounds-20250317-d7/"
+  (dired-filename . "/Users/griffen/Downloads/wounds-20250317-d7/m1"))
+ ("/Users/griffen/Downloads/wounds-20250310-d0/"
+  (dired-filename . "/Users/griffen/Downloads/wounds-20250310-d0/m1"))
+ ("/Users/griffen/Downloads/western-blotting/"
+  (dired-filename . "/Users/griffen/Downloads/western-blotting/1601925-Electrophoresis-Handbook.pdf"))
+ ("/Users/griffen/Downloads/updated_tw2flox_sequencing/"
+  (dired-filename . "/Users/griffen/Downloads/updated_tw2flox_sequencing/SGJHBR_results"))
+ ("/Users/griffen/Downloads/tmlh/"
+  (dired-filename . "/Users/griffen/Downloads/tmlh/Too Many Losing Heroines! v01.epub"))
+ ("/Users/griffen/Downloads/tfatlas/"
+  (dired-filename . "/Users/griffen/Downloads/tfatlas/GSM6706673_201218_TFmap_S1.csv"))
+ ("/Users/griffen/images/"
+  (dired-filename . "/Users/griffen/images/Rplots.pdf"))
+ ("/Users/griffen/.emacs.d/lisp/snippets.el" . 116)
+ ("/Users/griffen/.emacs.d/eln-cache/"
+  (dired-filename . "/Users/griffen/.emacs.d/eln-cache/29.4-2971ed30"))
+ ("/Users/griffen/.ssh/config" . 435)
+ ("/ssh:jlab:/home/griffen/mnt/sdd1/" . 50)
+ ("/ssh:jlab:/home/griffen/Screenshots/"
+  (dired-filename . "/ssh:jlab:/home/griffen/Screenshots/Screenshot from 2024-04-23 15-59-46.png"))
+ ("/ssh:jlab:/home/griffen/.ncbi/"
+  (dired-filename . "/ssh:jlab:/home/griffen/.ncbi/user-settings.mkfg"))
+ ("/ssh:jlab:/home/griffen/.cache/"
+  (dired-filename . "/ssh:jlab:/home/griffen/.cache/JNA"))
+ ("/Users/griffen/.emacs.d/lisp/pdf.el" . 356)
+ ("/Users/griffen/.emacs.d/lisp/completion.el" . 1545)
+ ("/Users/griffen/go/"
+  (dired-filename . "/Users/griffen/go/pkg"))
+ ("/Users/griffen/dotfiles/"
+  (dired-filename . "/Users/griffen/dotfiles/.git"))
+ ("/Users/griffen/csvs/"
+  (dired-filename . "/Users/griffen/csvs/126_ta1_circles.csv"))
+ ("/Users/griffen/convert/"
+  (dired-filename . "/Users/griffen/convert/obsidian"))
+ ("/Users/griffen/bin/"
+  (dired-filename . "/Users/griffen/bin/ani-cli"))
+ ("/Users/griffen/archive/" . 40)
+ ("/Users/griffen/Zotero/"
+  (dired-filename . "/Users/griffen/Zotero/better-bibtex"))
+ ("/Users/griffen/Music/"
+  (dired-filename . "/Users/griffen/Music/$RECYCLE.BIN"))
+ ("/Users/griffen/Movies/"
+  (dired-filename . "/Users/griffen/Movies/$RECYCLE.BIN"))
+ ("/Users/griffen/Library/"
+  (dired-filename . "/Users/griffen/Library/Cookies"))
+ ("/Users/griffen/Exercism/"
+  (dired-filename . "/Users/griffen/Exercism/awk"))
+ ("/Users/griffen/Dropbox/"
+  (dired-filename . "/Users/griffen/Dropbox/org"))
+ ("/cores/" . 24)
+ ("/System/"
+  (dired-filename . "/System/Applications"))
+ ("/.nofollow/" . 28)
+ ("/private/"
+  (dired-filename . "/private/etc"))
+ ("/sbin/"
+  (dired-filename . "/sbin/apfs_hfs_convert"))
+ ("/"
+  (dired-filename . "/Users"))
+ ("/tmp/tmux-501/"
+  (dired-filename . "/tmp/tmux-501/default"))
+ ("/tmp/"
+  (dired-filename . "/tmp/bb8cb8ee-760c-4f4f-90b9-8797ea198f52.bin"))
+ ("/Users/griffen/Downloads/wounds-20250317-d7/measurements.org" . 799)
+ ("/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/"
+  (dired-filename . "/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/.lesshst"))
+ ("/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/.remote-nvim/"
+  (dired-filename . "/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/.remote-nvim/nvim-downloads"))
+ ("/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/public_html/"
+  (dired-filename . "/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/public_html/docs"))
+ ("/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/.cache/"
+  (dired-filename . "/ssh:wakelin@timberlea.cs.dal.ca:/users/grad/wakelin/.cache/nvim"))
+ ("/Users/griffen/Dropbox/org/lab/seminars/wali-khan-20250318.org" . 1025)
+ ("/Users/griffen/Dropbox/org/lab/temp/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/temp/images"))
+ ("/Users/griffen/Dropbox/.dropbox.cache/"
+  (dired-filename . "/Users/griffen/Dropbox/.dropbox.cache/app_fs_ephemeral_files"))
+ ("/Users/griffen/omero/"
+  (dired-filename . "/Users/griffen/omero/log"))
+ ("/Users/griffen/notes/"
+  (dired-filename . "/Users/griffen/notes/org-roam.db"))
+ ("/Users/griffen/Dropbox/org/roam/library.bib" . 290672)
+ ("/Users/griffen/.emacs.d/lisp/bib.el" . 3701)
+ ("/Users/griffen/Dropbox/org/roam/reference/cherief_2023.org" . 339)
+ ("/Users/griffen/Downloads/skin-singlecell-2025/NS24/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/NS24/barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/NS23/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/NS23/barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/VU1/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/VU1/barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/GSM7717086_PWH27D30/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/GSM7717086_PWH27D30/PWH27D30"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/GSM7717087_PWH28D0/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/GSM7717087_PWH28D0/PWH28D0"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/NS63D/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/NS63D/barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/VU4/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/VU4/barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/GSM7717090_PWH28D30/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/GSM7717090_PWH28D30/PWH28D30"))
+ ("/Users/griffen/Downloads/skin-singlecell-2025/GSM7717090_PWH28D30/PWH28D30/"
+  (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/GSM7717090_PWH28D30/PWH28D30/PWH28D30_barcodes.tsv.gz"))
+ ("/Users/griffen/Downloads/$RECYCLE.BIN/"
+  (dired-filename . "/Users/griffen/Downloads/$RECYCLE.BIN/desktop.ini"))
+ ("/Users/griffen/.emacs.d.debug/"
+  (dired-filename . "/Users/griffen/.emacs.d.debug/auto-save-list"))
+ ("/Users/griffen/.emacs.d.bak/"
+  (dired-filename . "/Users/griffen/.emacs.d.bak/.git"))
+ ("/Users/griffen/Documents/protocols/latex/protocols.tex" . 541)
+ ("/Users/griffen/.latexmkrc" . 227)
+ ("/Users/griffen/.emacs.d/lisp/elfeed.el" . 3723)
+ ("/Users/griffen/.emacs.d/lisp/capture-anywhere.el" . 527)
+ ("/Users/griffen/.config/skhd/skhdrc" . 318)
+ ("/Users/griffen/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/"
+  (dired-filename . "/Users/griffen/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/reminders-beorg.org"))
+ ("/opt/homebrew/Cellar/emacs-plus@29/29.4/share/emacs/29.4/lisp/files.el" . 59605)
+ ("/Users/griffen/.emacs.d/backups/"
+  (dired-filename . "/Users/griffen/.emacs.d/backups/!Users!griffen!.config!skhd!skhdrc.~1~"))
+ ("/Users/griffen/.emacs.d/eshell/"
+  (dired-filename . "/Users/griffen/.emacs.d/eshell/history"))
+ ("/Users/griffen/.emacs.d/elfeed/"
+  (dired-filename . "/Users/griffen/.emacs.d/elfeed/index"))
+ ("/Users/griffen/.emacs.d/config.org" . 1810)
+ ("/Users/griffen/.cocoapods/"
+  (dired-filename . "/Users/griffen/.cocoapods/repos"))
+ ("/Users/griffen/.m2/"
+  (dired-filename . "/Users/griffen/.m2/repository"))
+ ("/Users/griffen/.lldb/"
+  (dired-filename . "/Users/griffen/.lldb/lldb-repl-widehistory"))
+ ("/Users/griffen/.fzf/"
+  (dired-filename . "/Users/griffen/.fzf/.git"))
+ ("/Users/griffen/.iterm2/"
+  (dired-filename . "/Users/griffen/.iterm2/imgcat"))
+ ("/Users/griffen/textfiles/"
+  (dired-filename . "/Users/griffen/textfiles/SMMC_bulk_data_cache"))
+ ("/Users/griffen/.emacs.d/lisp/setup-eww.el" . 466)
+ ("/Users/griffen/Documents/papers/innervation/JohnstonMillerCSHP2022.org" . 25)
+ ("/Users/griffen/.emacs.d/lisp/core.el" . 553)
+ ("/Users/griffen/Documents/papers/innervation/"
+  (dired-filename . "/Users/griffen/Documents/papers/innervation/JohnstonMillerCSHP2022.pdf"))
+ ("/Users/griffen/Documents/papers/muscle/"
+  (dired-filename . "/Users/griffen/Documents/papers/muscle/AgeRelatedChangesInExerciseResponseRegeneration_Grounds.pdf"))
+ ("/Users/griffen/Documents/papers/satellite_cells/"
+  (dired-filename . "/Users/griffen/Documents/papers/satellite_cells/AgedMuSCs_CosgroveNatMed2015.pdf"))
+ ("/Users/griffen/Documents/papers/twist2/"
+  (dired-filename . "/Users/griffen/Documents/papers/twist2/LI-DISSERTATION-2019.pdf"))
+ ("/Users/griffen/Documents/papers/digits/" . 56)
+ ("/Users/griffen/Documents/quantification/"
+  (dired-filename . "/Users/griffen/Documents/quantification/pax7_counts.csv"))
+ ("/Users/griffen/Documents/books/"
+  (dired-filename . "/Users/griffen/Documents/books/.git"))
+ ("/Users/griffen/fiji-measure-fibre-intensity-testing/"
+  (dired-filename . "/Users/griffen/fiji-measure-fibre-intensity-testing/macro_out.csv"))
+ ("/Users/griffen/.emacs.d/pretty-symbols.csv" . 635)
+ ("/Users/griffen/.config/yabai-emacs-window-handler.sh" . 373)
+ ("/Users/griffen/bin/vkorgheadingstats.sh" . 206)
+ ("/Users/griffen/.zshrc_exports" . 695)
+ ("/tmp/homebrew.mxcl.emacs-plus.stderr.log" . 2604)
+ ("/Users/griffen/.emacs.d/transient/"
+  (dired-filename . "/Users/griffen/.emacs.d/transient/history.el"))
+ ("/Users/griffen/.emacs.d/elpa/"
+  (dired-filename . "/Users/griffen/.emacs.d/elpa/archives"))
+ ("/Users/griffen/Library/LaunchAgents/gnu.emacs.daemon.plist" . 346)
+ ("/Users/griffen/.hammerspoon/"
+  (dired-filename . "/Users/griffen/.hammerspoon/window.lua"))
+ ("/Users/griffen/.hammerspoon/window.lua" . 3695)
+ ("/Users/griffen/scratch/cpp/"
+  (dired-filename . "/Users/griffen/scratch/cpp/temp"))
+ ("/Users/griffen/scratch/cpp/temp/"
+  (dired-filename . "/Users/griffen/scratch/cpp/temp/.."))
+ ("/Users/griffen/scratch/cpp/temp/address.cpp" . 232)
+ ("/opt/homebrew/Cellar/emacs-plus@29/29.4/share/emacs/29.4/lisp/loaddefs.el" . 413527)
+ ("/Users/griffen/images/plot_intensities.org" . 186)
+ ("/Users/griffen/images/177_intensities.csv" . 12363)
+ ("/Users/griffen/images/126_intensities.csv" . 209)
+ ("/Volumes/"
+  (dired-filename . "/Volumes/FS"))
+ ("/Users/Shared/"
+  (dired-filename . "/Users/Shared/Numi"))
+ ("/Applications/"
+  (dired-filename . "/Applications/.."))
+ ("/Applications/Fiji.app/"
+  (dired-filename . "/Applications/Fiji.app/.."))
+ ("/Applications/Fiji.app/macros/"
+  (dired-filename . "/Applications/Fiji.app/macros/.."))
+ ("/Applications/Fiji.app/scripts/"
+  (dired-filename . "/Applications/Fiji.app/scripts/.."))
+ ("/Applications/Fiji.app/plugins/"
+  (dired-filename . "/Applications/Fiji.app/plugins/.."))
+ ("/Applications/Fiji.app/plugins/Macros/"
+  (dired-filename . "/Applications/Fiji.app/plugins/Macros/..")))

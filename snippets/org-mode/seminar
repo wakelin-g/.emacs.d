@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: seminar template
+# key: seminar
+# --
+#+title: $1 seminar
+#+author: Griffen Wakelin
+#+date: `(format-time-string "<%Y-%m-%d>")`
+
+* $2

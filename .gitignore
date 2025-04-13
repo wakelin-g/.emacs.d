@@ -1,0 +1,41 @@
+# Compiled
+*.elc
+
+# Packaging
+.cask
+elpaca/*
+
+# Personal files
+ido.last
+.mc-lists.el
+.yas*
+auto-save-list
+move-line-region.el
+ac-comphist.dat
+recentf*
+tramp
+eshell
+elpa/*
+url/*
+elpy/*
+/elfeed/*
+/eln-cache/*
+semanticdb/*
+transient/*
+request/*
+srecode-map.el
+.org-id-locations
+*~
+package-quickstart.el
+custom.el
+image-dired/
+newsticker/
+
+# Backup files
+\#*
+*.org
+/elpa-28/
+/elpa-27/
+/straight/
+org-roam.db
+.DS_Store

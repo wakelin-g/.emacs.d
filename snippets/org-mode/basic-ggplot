@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: r image-ggplot
+# key: r-gg
+# --
+#+begin_src R :results graphics :file ${1:file}.png :width 8 :height 8 :res 200 :units cm
+library(ggplot2)
+
+data <- readr::read_csv($2)
+
+gg <- ggplot(data, aes($3)) |>
+    geom_${4:point(size=3)} +
+    ggpubr::theme_pubr(base_size=20)
+gg
+#+end_src

@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Slurm header
+# expand-env: ((yas-indent-line 'fixed))
+# key: slrm
+# --
+#+BEGIN_SRC bash :results output
+  date
+  sbatch <<SUBMITSCRIPT
+  #!/bin/bash
+  #SBATCH --job-name=${1:NAME}
+  #SBATCH --output=$1.log
+  #SBATCH --open-mode=truncate
+  #SBATCH --partition=standard
+  #SBATCH --time=${2:24:00:00}
+  #SBATCH --ntasks=1
+  #SBATCH --cpus-per-task=${3:1}
+
+  $0
+
+  SUBMITSCRIPT
+#+END_SRC
