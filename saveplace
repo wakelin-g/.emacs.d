@@ -1,23 +1,68 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/Users/griffen/Dropbox/org/" . 29)
+(("/Users/griffen/Dropbox/org/todo.org" . 48607)
+ ("/Users/griffen/Dropbox/org/roam/20250415124348-ires.org" . 113)
+ ("/Users/griffen/Dropbox/org/roam/20250415124049-2a_peptides.org" . 120)
  ("/Users/griffen/Dropbox/org/calendar.org" . 31)
  ("/Users/griffen/Dropbox/org/reminders.org" . 353)
- ("/Users/griffen/Dropbox/org/todo.org_archive" . 51651)
- ("/Users/griffen/.emacs.d/lisp/org.el" . 22456)
- ("/Users/griffen/Dropbox/org/todo.org" . 49925)
+ ("/Users/griffen/Dropbox/org/lab/stz-microct-analysis.org" . 10914)
+ ("/Users/griffen/.emacs.d/lisp/bib.el" . 622)
+ ("/Users/griffen/Dropbox/org/lab/development-review-2025.org" . 1596)
+ ("/Users/griffen/.emacs.d/bookmarks" . 251)
+ ("/Users/griffen/.emacs.d/elfeed/index" . 2255100)
+ ("/Users/griffen/tmp.csv" . 26)
+ ("/Users/griffen/.emacs.d/lisp/utils.el" . 2619)
+ ("/Users/griffen/Dropbox/org/lab/seminars/alienor-jamet-20250415.org" . 1738)
+ ("/Users/griffen/.emacs.d/lisp/evil.el" . 1051)
+ ("/Users/griffen/.emacs.d/lisp/keybinds.el" . 1194)
+ ("/Users/griffen/Dropbox/org/todo.org_archive" . 53323)
+ ("/Users/griffen/Dropbox/org/insurance.org" . 644)
+ ("/Users/griffen/Dropbox/org/temp/literate.org" . 1269)
+ ("/Users/griffen/Dropbox/org/"
+  (dired-filename . "/Users/griffen/Dropbox/org/roam"))
+ ("/Users/griffen/Dropbox/org/experiments.org" . 330)
+ ("/Users/griffen/Dropbox/org/lab/seminars/"
+  (dired-filename . "/Users/griffen/Dropbox/org/lab/seminars/wali-khan-20250318.org"))
+ ("/Users/griffen/.emacs.d/lisp/overrides.el" . 223)
+ ("/Users/griffen/Dropbox/org/lab/seminars/yves-dekoninck-20250325.org" . 503)
+ ("/Users/griffen/Dropbox/org/lab/seminars/abdallah-alshanti-20250327.org" . 1454)
+ ("/Users/griffen/Dropbox/org/lab/neb-qpcr.org" . 3180)
+ ("/Users/griffen/Dropbox/org/lab/delete-this-later.org" . 1216)
+ ("/Users/griffen/Dropbox/org/lab/custom_packages.sty" . 1683)
+ ("/Users/griffen/Dropbox/org/gym.org" . 7161)
+ ("/Users/griffen/.emacs.d/lisp/minibuffer.el" . 6952)
+ ("/opt/homebrew/Cellar/emacs-plus@29/29.4/share/emacs/29.4/lisp/filenotify.el" . 5894)
+ ("/Users/griffen/Dropbox/org/roam/"
+  (dired-filename . "/Users/griffen/Dropbox/org/roam/20250309151420-timeouts.org"))
+ ("/Users/griffen/Dropbox/"
+  (dired-filename . "/Users/griffen/Dropbox/org"))
+ ("/Users/griffen/"
+  (dired-filename . "/Users/griffen/Dropbox"))
+ ("/Users/"
+  (dired-filename . "/Users/griffen"))
+ ("/Users/griffen/Downloads/"
+  (dired-filename . "/Users/griffen/Downloads/C57_3R_EdU_cellcounter.xml"))
+ ("/Users/griffen/.emacs.d/lisp/org.el" . 22560)
+ ("/Users/griffen/.emacs.d/lisp/major-modes.el" . 4631)
+ ("/Volumes/"
+  (dired-filename . "/Volumes/GRIFFEN_W"))
+ ("/"
+  (dired-filename . "/Volumes"))
+ ("/Users/griffen/.emacs.d/lisp/setup-modeline.el" . 4307)
+ ("/Users/griffen/.emacs.d/gw-funcs.el" . 99)
+ ("/Users/griffen/.emacs.d/lisp/completion.el" . 3717)
+ ("/Users/griffen/.emacs.d/straight/repos/org-roam/CHANGELOG.md" . 16699)
+ ("/Users/griffen/Dropbox/org/lab/seminars/maya-selitser-20250410.org" . 285)
+ ("/Users/griffen/Dropbox/org/lab/seminars/yang-zhou-20250408.org" . 670)
+ ("/Users/griffen/.emacs.d/snippets/org-mode/seminar" . 164)
+ ("/Users/griffen/.emacs.d/lisp/ess.el" . 411)
  ("/Users/griffen/.emacs.d/reference.org" . 3848)
- ("/Users/griffen/.emacs.d/lisp/keybinds.el" . 205)
  ("/Users/griffen/Dropbox/org/eln.org" . 231)
- ("/opt/homebrew/Cellar/emacs-plus@29/29.4/share/emacs/29.4/lisp/filenotify.el" . 6322)
  ("/Users/griffen/Dropbox/org/pax7.org" . 3390)
  ("/Users/griffen/.emacs.d/"
   (dired-filename . "/Users/griffen/.emacs.d/lisp"))
  ("/Users/griffen/Dropbox/org/webpages.org" . 4311)
- ("/Users/griffen/.emacs.d/gw-funcs.el" . 10828)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/human-diabetic-wounds/proc.py" . 660)
  ("/Users/griffen/Dropbox/org/scratch.org" . 106)
- ("/Users/griffen/.emacs.d/lisp/major-modes.el" . 3383)
- ("/Users/griffen/.emacs.d/elfeed/index" . 1669310)
  ("/Users/griffen/.emacs.d/lisp/theme.el" . 2887)
  ("/Users/griffen/scratch/wakelin-g.github.io/pages/notebooks/NCB2017_ligands_receptors.qmd" . 877)
  ("/Users/griffen/scratch/wakelin-g.github.io/pages/"
@@ -26,29 +71,20 @@
   (dired-filename . "/Users/griffen/Dropbox/org/temp/banana.org"))
  ("/Users/griffen/personal/"
   (dired-filename . "/Users/griffen/personal/genome_Griffen_Wakelin_v5_Full_20250205062622.zip.gpg"))
- ("/Users/griffen/Dropbox/org/roam/"
-  (dired-filename . "/Users/griffen/Dropbox/org/roam/20250309151420-timeouts.org"))
  ("/Users/griffen/Dropbox/org/lab/"
   (dired-filename . "/Users/griffen/Dropbox/org/lab/joel-pde10a"))
  ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/"
   (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/merged.h5ad"))
  ("/Users/griffen/Downloads/figures/"
   (dired-filename . "/Users/griffen/Downloads/figures/tsnehaensel-2020-il6st-colorbar.svg"))
- ("/Users/griffen/.emacs.d/lisp/utils.el" . 2578)
  ("/Users/griffen/scratch/wakelin-g.github.io/pages/resources.html" . 3270)
  ("/Users/griffen/scratch/wakelin-g.github.io/"
   (dired-filename . "/Users/griffen/scratch/wakelin-g.github.io/pages"))
  ("/Users/griffen/scratch/"
   (dired-filename . "/Users/griffen/scratch/wakelin-g.github.io"))
- ("/Users/griffen/"
-  (dired-filename . "/Users/griffen/scratch"))
- ("/Users/griffen/Downloads/"
-  (dired-filename . "/Users/griffen/Downloads/de-micheli-analysis-joel"))
  ("/Users/griffen/Downloads/de-micheli-analysis-joel/"
   (dired-filename . "/Users/griffen/Downloads/de-micheli-analysis-joel/GSE143437_DeMicheli_MuSCatlas_normalizeddata.txt.gz"))
  ("/Users/griffen/Downloads/de-micheli-analysis-joel/report.qmd" . 878)
- ("/Users/"
-  (dired-filename . "/Users/griffen"))
  ("/Users/griffen/Dropbox/org/roam/20250330144515-pgp.org" . 2818)
  ("/Users/griffen/.emacs.d/lisp/eshell.el" . 215)
  ("/Users/griffen/.emacs.d/lisp/funcs-common.el" . 93)
@@ -61,7 +97,6 @@
  ("/Users/griffen/Downloads/figures/tsnehaensel-2020-il6st-colorbar.svg" . 30977)
  ("/Users/griffen/Downloads/figures/tsnehaensel-2020-osmr-colorbar.svg" . 1606)
  ("/Users/griffen/.emacs.d/lisp/dired.el" . 32)
- ("/Users/griffen/Dropbox/org/lab/seminars/abdallah-alshanti-20250327.org" . 1450)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/wounded3/" . 320)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/"
   (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020"))
@@ -73,9 +108,6 @@
  ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/wounded1/" . 234)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/unwounded2/" . 236)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/haensel-2020/unwounded1/" . 236)
- ("/Users/griffen/Dropbox/org/lab/seminars/"
-  (dired-filename . "/Users/griffen/Dropbox/org/lab/seminars/wali-khan-20250318.org"))
- ("/Users/griffen/Dropbox/org/lab/seminars/yves-dekoninck-20250325.org" . 507)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/"
   (dired-filename . "/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D30"))
  ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor5/PWH26D30/"
@@ -96,9 +128,6 @@
  ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor3/" . 587)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor1/" . 74)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/csc-human-wounds/donor2/" . 74)
- ("/Users/griffen/.emacs.d/snippets/org-mode/seminar" . 162)
- ("/Users/griffen/Dropbox/org/insurance.org" . 327)
- ("/Users/griffen/Dropbox/org/experiments.org" . 330)
  ("/Users/griffen/Dropbox/org/lab/qpcr/"
   (dired-filename . "/Users/griffen/Dropbox/org/lab/qpcr/qpcr-primer-workup.org"))
  ("/Users/griffen/Dropbox/org/lab/qpcr/qpcr-results-20250228/"
@@ -118,7 +147,6 @@
   (dired-filename . "/Users/griffen/.emacs.d/snippets/org-mode/slurm-header"))
  ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/prepare_files" . 428)
  ("/Users/griffen/Dropbox/org/roam/reference/li_2019b.org" . 3317)
- ("/Users/griffen/Dropbox/org/lab/development-review-2025.org" . 852)
  ("/Users/griffen/Dropbox/org/lab/sommer-2018/osm_counts_deseq.png" . 2263)
  ("/Users/griffen/.emacs.d/snippets/org-mode/basic-ggplot" . 65)
  ("/ssh:jlab:/home/griffen/mnt/hdd2/sommer-data-2018/download_data.sh" . 113)
@@ -137,13 +165,9 @@
  ("/Users/griffen/.emacs.d/straight/"
   (dired-filename . "/Users/griffen/.emacs.d/straight/build"))
  ("/Users/griffen/.emacs.d/lisp/pretty-latex.el" . 34761)
- ("/Users/griffen/Dropbox/org/lab/delete-this-later.org" . 1197)
- ("/Users/griffen/.emacs.d/lisp/setup-modeline.el" . 3878)
  ("/Users/griffen/singlecelldata/"
   (dired-filename . "/Users/griffen/singlecelldata/bulk"))
- ("/Users/griffen/.emacs.d/lisp/ess.el" . 332)
  ("/Users/griffen/.emacs.d/init.el" . 2512)
- ("/Users/griffen/.emacs.d/lisp/minibuffer.el" . 343)
  ("/Users/griffen/.emacs.d/lisp/ui.el" . 665)
  ("/Users/griffen/.emacs.d/lisp/better-buffers.el" . 98)
  ("/Users/griffen/.emacs.d/lisp/setup-reading.el" . 5644)
@@ -262,7 +286,6 @@
  ("/ssh:jlab:/home/griffen/.cache/"
   (dired-filename . "/ssh:jlab:/home/griffen/.cache/JNA"))
  ("/Users/griffen/.emacs.d/lisp/pdf.el" . 356)
- ("/Users/griffen/.emacs.d/lisp/completion.el" . 1545)
  ("/Users/griffen/go/"
   (dired-filename . "/Users/griffen/go/pkg"))
  ("/Users/griffen/dotfiles/"
@@ -284,8 +307,6 @@
   (dired-filename . "/Users/griffen/Library/Cookies"))
  ("/Users/griffen/Exercism/"
   (dired-filename . "/Users/griffen/Exercism/awk"))
- ("/Users/griffen/Dropbox/"
-  (dired-filename . "/Users/griffen/Dropbox/org"))
  ("/cores/" . 24)
  ("/System/"
   (dired-filename . "/System/Applications"))
@@ -294,8 +315,6 @@
   (dired-filename . "/private/etc"))
  ("/sbin/"
   (dired-filename . "/sbin/apfs_hfs_convert"))
- ("/"
-  (dired-filename . "/Users"))
  ("/tmp/tmux-501/"
   (dired-filename . "/tmp/tmux-501/default"))
  ("/tmp/"
@@ -319,7 +338,6 @@
  ("/Users/griffen/notes/"
   (dired-filename . "/Users/griffen/notes/org-roam.db"))
  ("/Users/griffen/Dropbox/org/roam/library.bib" . 290672)
- ("/Users/griffen/.emacs.d/lisp/bib.el" . 3701)
  ("/Users/griffen/Dropbox/org/roam/reference/cherief_2023.org" . 339)
  ("/Users/griffen/Downloads/skin-singlecell-2025/NS24/"
   (dired-filename . "/Users/griffen/Downloads/skin-singlecell-2025/NS24/barcodes.tsv.gz"))
@@ -394,7 +412,6 @@
  ("/Users/griffen/.config/yabai-emacs-window-handler.sh" . 373)
  ("/Users/griffen/bin/vkorgheadingstats.sh" . 206)
  ("/Users/griffen/.zshrc_exports" . 695)
- ("/tmp/homebrew.mxcl.emacs-plus.stderr.log" . 2604)
  ("/Users/griffen/.emacs.d/transient/"
   (dired-filename . "/Users/griffen/.emacs.d/transient/history.el"))
  ("/Users/griffen/.emacs.d/elpa/"
@@ -412,8 +429,6 @@
  ("/Users/griffen/images/plot_intensities.org" . 186)
  ("/Users/griffen/images/177_intensities.csv" . 12363)
  ("/Users/griffen/images/126_intensities.csv" . 209)
- ("/Volumes/"
-  (dired-filename . "/Volumes/FS"))
  ("/Users/Shared/"
   (dired-filename . "/Users/Shared/Numi"))
  ("/Applications/"

@@ -78,8 +78,14 @@
 
 (use-package doom-themes
   :straight t
+  :disabled
   :config
   (setq doom-themes-enable-bold t
         doom-themes-enable-italic t)
   (load-theme 'doom-one t)
   (doom-themes-org-config))
+
+(use-package leuven-theme
+  :straight t
+  :config
+  (load-theme 'leuven t))

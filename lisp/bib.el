@@ -4,7 +4,7 @@
 
 (setq citar-bibliography gw/default-bibliography
 	  citar-at-point-function 'embark-act
-	  citar-format-reference-function 'citar-citeproc-format-reference
+	  ;; citar-format-reference-function 'citar-citeproc-format-reference
       citar-org-roam-subdir "reference/"
       citar-notes-paths '("~/Dropbox/org/roam/reference/")
 	  bibtex-completion-notes-path "~/Dropbox/org/roam"
@@ -15,8 +15,6 @@
 (use-package citar
   :straight t
   :after (org org-roam)
-  :bind (:map org-mode-map
-              ("C-c b" . citar-insert-citation))
   :init
   (setq org-cite-insert-processor 'citar
         org-cite-follow-processor 'citar

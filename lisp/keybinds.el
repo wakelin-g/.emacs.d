@@ -28,3 +28,8 @@
 (define-key global-map (kbd "s-w") 'tab-bar-close-tab)
 
 (define-key dired-mode-map (kbd "C-x p") 'dired-preview-mode)
+
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(define-key org-mode-map (kbd "C-c b") 'citar-insert-citation)

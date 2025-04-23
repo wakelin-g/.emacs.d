@@ -77,3 +77,45 @@
 ;; 					    (face-spec-reset-face face)
 ;; 					    (set-face-foreground face (face-attribute 'default :background)))
 ;; 					  (set-face-background 'fringe (face-attribute 'default :background))))
+
+
+;; NOTE: THIS OVERRIDES CORE EMACS SOURCE CODE BECAUSE FUCKING
+;; DROPBOX DOES SOMETHING WEIRD AND SOME SAVANT FROM THE DOOM
+;; EMACS DISCORD GAVE ME THIS AND IT WORKED! IN THE FUTURE, THIS
+;; COULD AND WILL LIKELY BREAK!
+
+(defun file-notify--call-handler (watch desc action file file1)
+  "Call the handler of WATCH with the arguments DESC, ACTION, FILE and FILE1."
+  (when (or
+         ;; If there is no relative file name for that
+         ;; watch, we watch the whole directory.
+         (null (file-notify--watch-filename watch))
+         ;; File matches.
+         (string-equal
+          (file-notify--watch-filename watch)
+          (file-name-nondirectory file))
+
+         ;; Directory matches.
+         ;;  FIXME: What purpose would this condition serve?
+         ;;  Doesn't it just slip through events for files
+         ;;  having the same name as the last component of the
+         ;;  directory of the file that we are really watching?
+         ;;(string-equal
+         ;; (file-name-nondirectory file)
+         ;; (file-name-nondirectory (file-notify--watch-directory watch)))
+
+         ;; File1 matches.
+         (and (stringp file1)
+              (string-equal (file-notify--watch-filename watch)
+                            (file-name-nondirectory file1))))
+    (when file-notify-debug
+      (message
+       "file-notify-callback %S %S %S %S %S %S %S"
+       desc action file file1 watch
+       (file-notify--watch-absolute-filename watch)
+       (file-notify--watch-directory watch)))
+    (when (file-notify--watch-callback watch)
+      (funcall (file-notify--watch-callback watch)
+             (if file1
+                 (list desc action file file1)
+               (list desc action file))))))/

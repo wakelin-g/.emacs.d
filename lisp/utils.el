@@ -94,3 +94,6 @@
      (mark " "
            (name 16 -1)
            " " filename))))
+
+(use-package visual-regexp
+  :straight t)
